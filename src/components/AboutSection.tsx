@@ -3,70 +3,70 @@ import aboutImage from '@/assets/about-training.jpg';
 
 export function AboutSection() {
   return (
-    <section id="sobre" className="py-20 bg-background">
-      <div className="container">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+    <section id="sobre" className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="container px-4 sm:px-6">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
             Quem somos
           </span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground mb-3 sm:mb-4">
             Sobre a Gmass
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-2">
             Proporcionamos aos clientes a aplicação de uma gestão administrativa e operacional em segurança do trabalho e meio ambiente, garantindo o atendimento e cumprimento da legislação trabalhista.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="relative">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center mb-10 sm:mb-12 md:mb-16">
+          <div className="relative order-2 lg:order-1">
             <img
               src={aboutImage}
               alt="Treinamento de segurança do trabalho"
-              className="w-full h-auto rounded-2xl shadow-lg"
+              className="w-full h-auto rounded-xl sm:rounded-2xl shadow-lg"
             />
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-2xl -z-10" />
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-accent/20 rounded-xl -z-10" />
+            <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-primary/20 rounded-xl sm:rounded-2xl -z-10 hidden sm:block" />
+            <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-accent/20 rounded-lg sm:rounded-xl -z-10 hidden sm:block" />
           </div>
-          <div>
-            <h3 className="text-2xl font-heading font-bold text-foreground mb-4">
+          <div className="order-1 lg:order-2">
+            <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3 sm:mb-4">
               Excelência em segurança e saúde ocupacional
             </h3>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
               Com mais de uma década de experiência, a Gmass é referência em consultoria e assessoria em segurança do trabalho, saúde ocupacional e meio ambiente.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               Nossa equipe de profissionais qualificados está preparada para atender às necessidades específicas de cada cliente, oferecendo soluções personalizadas e eficientes.
             </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-500 border border-border/50">
-            <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-              <Eye className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="group bg-card rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-card hover:shadow-glow transition-all duration-500 border border-border/50">
+            <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <Eye className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-primary group-hover:text-primary-foreground transition-colors" />
             </div>
-            <h3 className="text-xl font-heading font-bold text-foreground mb-4">Visão</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-3 sm:mb-4">Visão</h3>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               Todos podemos contribuir com a melhoria contínua dos processos.
             </p>
           </div>
 
-          <div className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-500 border border-border/50">
-            <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-              <Target className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors" />
+          <div className="group bg-card rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-card hover:shadow-glow transition-all duration-500 border border-border/50">
+            <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-accent/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <Target className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-accent group-hover:text-accent-foreground transition-colors" />
             </div>
-            <h3 className="text-xl font-heading font-bold text-foreground mb-4">Missão</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-3 sm:mb-4">Missão</h3>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               Trabalhar na implantação de uma cultura de segurança e prevenção do meio ambiente.
             </p>
           </div>
 
-          <div className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-500 border border-border/50">
-            <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-              <Heart className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
+          <div className="group bg-card rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-card hover:shadow-glow transition-all duration-500 border border-border/50 sm:col-span-2 md:col-span-1">
+            <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <Heart className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-primary group-hover:text-primary-foreground transition-colors" />
             </div>
-            <h3 className="text-xl font-heading font-bold text-foreground mb-4">Valores</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-3 sm:mb-4">Valores</h3>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               Atender de forma objetiva as legislações vigentes e normas institucionais.
             </p>
           </div>
