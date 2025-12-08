@@ -15,7 +15,7 @@ export function HeroSection() {
       />
       
       {/* Overlay gradient for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/60 to-primary/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/50 via-primary/40 to-primary/30" />
       
       {/* Background pattern effects */}
       <div className="absolute inset-0 opacity-10">
