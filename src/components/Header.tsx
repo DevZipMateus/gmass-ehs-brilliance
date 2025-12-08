@@ -28,12 +28,18 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-r from-primary via-primary to-primary-600 ${isScrolled ? 'shadow-card py-3' : 'py-5'}`}>
-      <div className="container flex items-center justify-between">
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary overflow-hidden ${isScrolled ? 'shadow-card py-3' : 'py-5'}`}>
+      {/* Background effects like hero */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute -top-10 -left-20 w-40 h-40 bg-accent rounded-full blur-3xl" />
+        <div className="absolute -bottom-10 right-20 w-60 h-60 bg-primary-600 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container relative flex items-center justify-between">
+
         <a href="#inicio" className="flex items-center gap-3">
           <img src={logoGmass} alt="Gmass Assessoria & Consultoria em EHS" className="h-20 w-auto" />
         </a>
-
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map(link => <a key={link.href} href={link.href} className="font-medium transition-colors duration-300 text-primary-foreground/90 hover:text-primary-foreground">
