@@ -9,6 +9,8 @@ import {
   AlertTriangle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import auditImage from '@/assets/services-audit.jpg';
+import environmentalImage from '@/assets/environmental.jpg';
 
 const services = [
   {
@@ -75,6 +77,36 @@ export function ServicesSection() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Soluções completas em segurança do trabalho e meio ambiente para garantir a conformidade legal e a proteção de seus colaboradores.
           </p>
+        </div>
+
+        {/* Featured images */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="relative group overflow-hidden rounded-2xl">
+            <img
+              src={auditImage}
+              alt="Auditoria de segurança do trabalho"
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+              <div>
+                <h3 className="text-xl font-bold text-primary-foreground mb-1">Auditorias especializadas</h3>
+                <p className="text-primary-foreground/80 text-sm">Inspeções detalhadas para garantir conformidade</p>
+              </div>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-2xl">
+            <img
+              src={environmentalImage}
+              alt="Gestão ambiental e sustentabilidade"
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-accent/80 to-transparent flex items-end p-6">
+              <div>
+                <h3 className="text-xl font-bold text-accent-foreground mb-1">Gestão ambiental</h3>
+                <p className="text-accent-foreground/80 text-sm">Compromisso com a sustentabilidade</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
