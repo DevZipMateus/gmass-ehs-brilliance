@@ -38,7 +38,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary overflow-hidden ${
-        isScrolled ? 'shadow-card py-2 md:py-3' : 'py-3 md:py-5'
+        isScrolled ? 'shadow-card py-2' : 'py-3 sm:py-4 md:py-5'
       }`}
     >
       {/* Background effects */}
@@ -52,22 +52,22 @@ export function Header() {
           <img
             src={logoGmass}
             alt="Gmass Assessoria & Consultoria em EHS"
-            className="h-14 sm:h-16 md:h-20 w-auto"
+            className="h-10 xs:h-12 sm:h-14 md:h-16 lg:h-20 w-auto"
           />
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-6 2xl:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="font-medium transition-colors duration-300 text-primary-foreground/90 hover:text-primary-foreground text-sm xl:text-base"
+              className="font-medium transition-colors duration-300 text-primary-foreground/90 hover:text-primary-foreground text-sm xl:text-base whitespace-nowrap"
             >
               {link.label}
             </a>
           ))}
-          <Button asChild variant="heroPrimary" size="default" className="lg:size-default xl:size-lg">
+          <Button asChild variant="heroPrimary" size="default" className="whitespace-nowrap">
             <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
               Fale conosco
             </a>
@@ -76,7 +76,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 -mr-2"
+          className="lg:hidden p-2 -mr-2 touch-manipulation"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
@@ -90,19 +90,19 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-background shadow-card animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto">
-          <nav className="container py-4 sm:py-6 flex flex-col gap-2 sm:gap-4 px-4 sm:px-6">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-background shadow-card animate-fade-in max-h-[calc(100vh-60px)] overflow-y-auto">
+          <nav className="container py-4 flex flex-col gap-1 px-4 sm:px-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-foreground hover:text-primary font-medium py-2 sm:py-3 transition-colors border-b border-border/30 last:border-0"
+                className="text-foreground hover:text-primary hover:bg-primary/5 font-medium py-3 px-2 transition-colors rounded-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <Button asChild variant="default" size="lg" className="mt-2 w-full">
+            <Button asChild variant="default" size="lg" className="mt-3 w-full">
               <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
                 Fale conosco
               </a>
