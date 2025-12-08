@@ -8,53 +8,58 @@ export function HeroSection() {
       id="inicio"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Background image */}
+      {/* Parallax Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${heroBackground})` }}
       />
 
       {/* Overlay gradient for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/50 via-primary/40 to-primary/30" />
 
-      {/* Background pattern effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-40 sm:w-72 h-40 sm:h-72 bg-accent rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-60 sm:w-96 h-60 sm:h-96 bg-primary rounded-full blur-3xl" />
+      {/* Animated background pattern effects with parallax */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-20 left-10 w-40 sm:w-72 h-40 sm:h-72 bg-accent rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-60 sm:w-96 h-60 sm:h-96 bg-primary rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary-foreground/20 rounded-full blur-3xl animate-pulse-slow" />
       </div>
 
       <div className="container relative pt-20 xs:pt-24 sm:pt-28 md:pt-32 pb-12 xs:pb-16 sm:pb-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Glassmorphism badges */}
           <div
             className="flex flex-wrap justify-center gap-2 mb-4 xs:mb-6 sm:mb-8 animate-fade-up"
             style={{ animationDelay: '0.1s' }}
           >
-            <span className="inline-flex items-center gap-1 xs:gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full text-primary-foreground text-[10px] xs:text-xs sm:text-sm font-medium border border-primary-foreground/20">
+            <span className="inline-flex items-center gap-1 xs:gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 bg-white/10 backdrop-blur-md rounded-full text-primary-foreground text-[10px] xs:text-xs sm:text-sm font-medium border border-white/20 shadow-lg">
               <Shield className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4" />
               Segurança do trabalho
             </span>
-            <span className="inline-flex items-center gap-1 xs:gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 bg-accent/20 backdrop-blur-sm rounded-full text-primary-foreground text-[10px] xs:text-xs sm:text-sm font-medium border border-accent/30">
+            <span className="inline-flex items-center gap-1 xs:gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 bg-accent/20 backdrop-blur-md rounded-full text-primary-foreground text-[10px] xs:text-xs sm:text-sm font-medium border border-accent/30 shadow-lg">
               <Leaf className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4" />
               Meio ambiente
             </span>
           </div>
 
           <h1
-            className="font-heading text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground mb-3 xs:mb-4 sm:mb-6 animate-fade-up leading-tight px-1"
+            className="font-heading text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground mb-3 xs:mb-4 sm:mb-6 animate-fade-up leading-tight px-1 drop-shadow-lg"
             style={{ animationDelay: '0.2s' }}
           >
             Gmass Assessoria & Consultoria em EHS
           </h1>
 
-          <h2
-            className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-4 xs:mb-6 sm:mb-8 animate-fade-up font-light px-2"
+          {/* Glassmorphism content box */}
+          <div 
+            className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 xs:p-5 sm:p-6 mb-6 xs:mb-8 border border-white/10 animate-fade-up mx-2 xs:mx-4 sm:mx-0"
             style={{ animationDelay: '0.3s' }}
           >
-            Sua parceira especializada em segurança do trabalho, saúde ocupacional e gestão ambiental. Implantamos uma cultura de prevenção e garantimos o cumprimento das legislações vigentes.
-          </h2>
+            <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-primary-foreground/90 font-light">
+              Sua parceira especializada em segurança do trabalho, saúde ocupacional e gestão ambiental. Implantamos uma cultura de prevenção e garantimos o cumprimento das legislações vigentes.
+            </h2>
+          </div>
 
           <p
-            className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-heading font-bold text-accent mb-6 xs:mb-8 sm:mb-10 animate-fade-up"
+            className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-heading font-bold text-accent mb-6 xs:mb-8 sm:mb-10 animate-fade-up drop-shadow-lg"
             style={{ animationDelay: '0.4s' }}
           >
             "Agora é com a gente!!!"
@@ -64,16 +69,16 @@ export function HeroSection() {
             className="flex flex-col gap-2 xs:gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 animate-fade-up px-2 xs:px-4 sm:px-0"
             style={{ animationDelay: '0.5s' }}
           >
-            <Button asChild variant="heroPrimary" size="default" className="w-full sm:w-auto text-sm xs:text-base">
+            <Button asChild variant="heroPrimary" size="default" className="w-full sm:w-auto text-sm xs:text-base shadow-xl">
               <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
                 Solicite um orçamento
                 <ArrowRight className="w-4 h-4" />
               </a>
             </Button>
-            <Button asChild variant="hero" size="default" className="w-full sm:w-auto text-sm xs:text-base">
+            <Button asChild variant="hero" size="default" className="w-full sm:w-auto text-sm xs:text-base backdrop-blur-md bg-white/10 border-white/20 hover:bg-white/20">
               <a href="#servicos">Conheça nossos serviços</a>
             </Button>
-            <Button asChild variant="hero" size="default" className="w-full sm:w-auto text-sm xs:text-base">
+            <Button asChild variant="hero" size="default" className="w-full sm:w-auto text-sm xs:text-base backdrop-blur-md bg-white/10 border-white/20 hover:bg-white/20">
               <a href="https://gmass.etreinare.com.br/home" target="_blank" rel="noopener noreferrer">
                 <GraduationCap className="w-4 h-4" />
                 Ver nossos cursos
