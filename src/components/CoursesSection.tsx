@@ -1,5 +1,7 @@
 import { GraduationCap, BookOpen, Award, Users, ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import trainingSessionImage from '@/assets/training-session.jpg';
+import elearningImage from '@/assets/elearning-course.jpg';
 
 const courseFeatures = [
   {
@@ -50,6 +52,44 @@ export function CoursesSection() {
             Oferecemos uma ampla variedade de cursos e treinamentos em segurança do trabalho, 
             saúde ocupacional e meio ambiente, todos ministrados por profissionais qualificados.
           </p>
+        </div>
+
+        {/* Featured training images */}
+        <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 xs:gap-4 sm:gap-6 mb-8 xs:mb-10 sm:mb-12 md:mb-16">
+          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl">
+            <img
+              src={trainingSessionImage}
+              alt="Treinamento presencial de segurança do trabalho"
+              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-foreground/80 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
+              <div>
+                <h3 className="text-base xs:text-lg sm:text-xl font-bold text-primary mb-0.5 xs:mb-1">
+                  Treinamentos presenciais
+                </h3>
+                <p className="text-primary/80 text-[10px] xs:text-xs sm:text-sm">
+                  Capacitação InCompany com instrutores especializados
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl">
+            <img
+              src={elearningImage}
+              alt="Plataforma de cursos EAD"
+              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-accent/80 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
+              <div>
+                <h3 className="text-base xs:text-lg sm:text-xl font-bold text-accent-foreground mb-0.5 xs:mb-1">
+                  Cursos EAD
+                </h3>
+                <p className="text-accent-foreground/80 text-[10px] xs:text-xs sm:text-sm">
+                  Aprenda no seu ritmo com nossa plataforma online
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Features grid */}
