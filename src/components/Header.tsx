@@ -28,7 +28,7 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary ${isScrolled ? 'shadow-card py-3' : 'py-5'}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-br from-primary via-primary to-primary-dark ${isScrolled ? 'shadow-card py-3' : 'py-5'}`}>
       <div className="container flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-3">
           <img src={logoGmass} alt="Gmass Assessoria & Consultoria em EHS" className="h-20 w-auto" />
