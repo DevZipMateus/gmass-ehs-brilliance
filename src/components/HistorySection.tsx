@@ -1,3 +1,6 @@
+import safetyInspectionImage from '@/assets/safety-inspection.jpg';
+import teamCollaborationImage from '@/assets/team-collaboration.jpg';
+
 const timelineEvents = [
   {
     year: '2010',
@@ -50,6 +53,44 @@ export function HistorySection() {
           <p className="text-sm xs:text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-1">
             Mais de uma década de experiência dedicada à segurança do trabalho e meio ambiente.
           </p>
+        </div>
+
+        {/* Featured images grid */}
+        <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 xs:gap-4 sm:gap-6 mb-8 xs:mb-10 sm:mb-12 md:mb-16 max-w-4xl mx-auto">
+          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl">
+            <img
+              src={safetyInspectionImage}
+              alt="Inspeção de segurança do trabalho"
+              className="w-full h-40 xs:h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
+              <div>
+                <h3 className="text-base xs:text-lg sm:text-xl font-bold text-primary-foreground mb-0.5">
+                  Excelência em segurança
+                </h3>
+                <p className="text-primary-foreground/80 text-[10px] xs:text-xs sm:text-sm">
+                  Acompanhamento técnico especializado
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl">
+            <img
+              src={teamCollaborationImage}
+              alt="Equipe de consultores em EHS"
+              className="w-full h-40 xs:h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-accent/70 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
+              <div>
+                <h3 className="text-base xs:text-lg sm:text-xl font-bold text-accent-foreground mb-0.5">
+                  Equipe qualificada
+                </h3>
+                <p className="text-accent-foreground/80 text-[10px] xs:text-xs sm:text-sm">
+                  Profissionais dedicados ao seu sucesso
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
