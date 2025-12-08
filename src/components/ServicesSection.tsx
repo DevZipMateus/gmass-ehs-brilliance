@@ -65,10 +65,17 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="servicos" className="py-10 xs:py-12 sm:py-16 md:py-20 bg-secondary/50">
-      <div className="container px-4 sm:px-6">
+    <section id="servicos" className="py-10 xs:py-12 sm:py-16 md:py-20 bg-secondary/50 relative overflow-hidden">
+      {/* Parallax background decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-10 w-40 sm:w-64 h-40 sm:h-64 bg-primary/10 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-10 right-10 w-60 sm:w-80 h-60 sm:h-80 bg-accent/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-primary/5 rounded-full blur-2xl animate-pulse-slow" />
+      </div>
+
+      <div className="container px-4 sm:px-6 relative">
         <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
-          <span className="inline-block px-3 py-1 xs:py-1.5 bg-accent/10 text-accent rounded-full text-xs sm:text-sm font-semibold mb-3">
+          <span className="inline-block px-3 py-1 xs:py-1.5 bg-accent/10 backdrop-blur-sm text-accent rounded-full text-xs sm:text-sm font-semibold mb-3 border border-accent/20">
             O que fazemos
           </span>
           <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">
@@ -79,16 +86,16 @@ export function ServicesSection() {
           </p>
         </div>
 
-        {/* Featured images */}
+        {/* Featured images with glassmorphism overlays */}
         <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 xs:gap-4 sm:gap-6 mb-6 xs:mb-8 sm:mb-12">
-          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl">
+          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-xl">
             <img
               src={auditImage}
               alt="Auditoria de segurança do trabalho"
-              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
-              <div>
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 xs:p-4 border border-white/20 w-full">
                 <h3 className="text-base xs:text-lg sm:text-xl font-bold text-primary-foreground mb-0.5 xs:mb-1">
                   Auditorias especializadas
                 </h3>
@@ -98,14 +105,14 @@ export function ServicesSection() {
               </div>
             </div>
           </div>
-          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl">
+          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-xl">
             <img
               src={environmentalImage}
               alt="Gestão ambiental e sustentabilidade"
-              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-accent/80 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
-              <div>
+            <div className="absolute inset-0 bg-gradient-to-t from-accent/90 via-accent/40 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 xs:p-4 border border-white/20 w-full">
                 <h3 className="text-base xs:text-lg sm:text-xl font-bold text-accent-foreground mb-0.5 xs:mb-1">
                   Gestão ambiental
                 </h3>
@@ -117,6 +124,7 @@ export function ServicesSection() {
           </div>
         </div>
 
+        {/* Glassmorphism service cards */}
         <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -125,13 +133,13 @@ export function ServicesSection() {
             return (
               <div
                 key={index}
-                className="group bg-card rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-6 shadow-card hover:-translate-y-2 transition-all duration-500 border border-border/50 hover:border-primary/30"
+                className="group bg-white/60 dark:bg-black/20 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-white/40 dark:border-white/10"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div
                   className={`w-8 xs:w-10 sm:w-12 md:w-14 h-8 xs:h-10 sm:h-12 md:h-14 ${
-                    isPrimary ? 'bg-primary/10' : 'bg-accent/10'
-                  } rounded-lg sm:rounded-xl flex items-center justify-center mb-2 xs:mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-300`}
+                    isPrimary ? 'bg-primary/10 border-primary/20' : 'bg-accent/10 border-accent/20'
+                  } backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center mb-2 xs:mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-300 border`}
                 >
                   <Icon className={`w-4 xs:w-5 sm:w-6 md:w-7 h-4 xs:h-5 sm:h-6 md:h-7 ${isPrimary ? 'text-primary' : 'text-accent'}`} />
                 </div>
@@ -147,7 +155,7 @@ export function ServicesSection() {
         </div>
 
         <div className="mt-6 xs:mt-8 sm:mt-12 text-center">
-          <Button asChild variant="default" size="lg" className="w-full xs:w-auto">
+          <Button asChild variant="default" size="lg" className="w-full xs:w-auto shadow-xl">
             <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
               Solicitar orçamento
             </a>

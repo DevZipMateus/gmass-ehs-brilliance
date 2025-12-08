@@ -3,10 +3,16 @@ import aboutImage from '@/assets/about-training.jpg';
 
 export function AboutSection() {
   return (
-    <section id="sobre" className="py-10 xs:py-12 sm:py-16 md:py-20 bg-background">
-      <div className="container px-4 sm:px-6">
+    <section id="sobre" className="py-10 xs:py-12 sm:py-16 md:py-20 bg-background relative overflow-hidden">
+      {/* Background decoration with parallax effect */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-20 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" />
+      </div>
+
+      <div className="container px-4 sm:px-6 relative">
         <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
-          <span className="inline-block px-3 py-1 xs:py-1.5 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold mb-3">
+          <span className="inline-block px-3 py-1 xs:py-1.5 bg-primary/10 backdrop-blur-sm text-primary rounded-full text-xs sm:text-sm font-semibold mb-3 border border-primary/20">
             Quem somos
           </span>
           <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">
@@ -22,27 +28,32 @@ export function AboutSection() {
             <img
               src={aboutImage}
               alt="Treinamento de segurança do trabalho"
-              className="w-full h-auto rounded-xl sm:rounded-2xl shadow-lg"
+              className="w-full h-auto rounded-xl sm:rounded-2xl shadow-xl"
             />
-            <div className="absolute -bottom-2 -right-2 xs:-bottom-3 xs:-right-3 sm:-bottom-4 sm:-right-4 w-12 xs:w-16 sm:w-20 md:w-24 h-12 xs:h-16 sm:h-20 md:h-24 bg-primary/20 rounded-xl sm:rounded-2xl -z-10 hidden xs:block" />
-            <div className="absolute -top-2 -left-2 xs:-top-3 xs:-left-3 sm:-top-4 sm:-left-4 w-10 xs:w-12 sm:w-14 md:w-16 h-10 xs:h-12 sm:h-14 md:h-16 bg-accent/20 rounded-lg sm:rounded-xl -z-10 hidden xs:block" />
+            {/* Glassmorphism overlay effect */}
+            <div className="absolute -bottom-3 -right-3 xs:-bottom-4 xs:-right-4 sm:-bottom-6 sm:-right-6 w-20 xs:w-24 sm:w-32 md:w-40 h-20 xs:h-24 sm:h-32 md:h-40 bg-primary/20 backdrop-blur-sm rounded-xl sm:rounded-2xl -z-10 hidden xs:block border border-primary/10" />
+            <div className="absolute -top-3 -left-3 xs:-top-4 xs:-left-4 sm:-top-6 sm:-left-6 w-16 xs:w-20 sm:w-24 md:w-28 h-16 xs:h-20 sm:h-24 md:h-28 bg-accent/20 backdrop-blur-sm rounded-lg sm:rounded-xl -z-10 hidden xs:block border border-accent/10" />
           </div>
           <div className="order-1 lg:order-2">
-            <h3 className="text-lg xs:text-xl sm:text-2xl font-heading font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">
-              Excelência em segurança e saúde ocupacional
-            </h3>
-            <p className="text-xs xs:text-sm sm:text-base text-muted-foreground mb-2 xs:mb-3 sm:mb-4 leading-relaxed">
-              Com mais de uma década de experiência, a Gmass é referência em consultoria e assessoria em segurança do trabalho, saúde ocupacional e meio ambiente.
-            </p>
-            <p className="text-xs xs:text-sm sm:text-base text-muted-foreground leading-relaxed">
-              Nossa equipe de profissionais qualificados está preparada para atender às necessidades específicas de cada cliente, oferecendo soluções personalizadas e eficientes.
-            </p>
+            {/* Glassmorphism text box */}
+            <div className="bg-white/50 dark:bg-black/20 backdrop-blur-md rounded-2xl p-5 xs:p-6 sm:p-8 border border-white/30 dark:border-white/10 shadow-lg">
+              <h3 className="text-lg xs:text-xl sm:text-2xl font-heading font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">
+                Excelência em segurança e saúde ocupacional
+              </h3>
+              <p className="text-xs xs:text-sm sm:text-base text-muted-foreground mb-2 xs:mb-3 sm:mb-4 leading-relaxed">
+                Com mais de uma década de experiência, a Gmass é referência em consultoria e assessoria em segurança do trabalho, saúde ocupacional e meio ambiente.
+              </p>
+              <p className="text-xs xs:text-sm sm:text-base text-muted-foreground leading-relaxed">
+                Nossa equipe de profissionais qualificados está preparada para atender às necessidades específicas de cada cliente, oferecendo soluções personalizadas e eficientes.
+              </p>
+            </div>
           </div>
         </div>
 
+        {/* Glassmorphism cards for Vision, Mission, Values */}
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 md:gap-8">
-          <div className="group bg-card rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 shadow-card hover:shadow-glow transition-all duration-500 border border-border/50">
-            <div className="w-10 xs:w-12 sm:w-14 md:w-16 h-10 xs:h-12 sm:h-14 md:h-16 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 xs:mb-4 sm:mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+          <div className="group bg-white/60 dark:bg-black/20 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/40 dark:border-white/10 hover:-translate-y-1">
+            <div className="w-10 xs:w-12 sm:w-14 md:w-16 h-10 xs:h-12 sm:h-14 md:h-16 bg-primary/10 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center mb-3 xs:mb-4 sm:mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300 border border-primary/20">
               <Eye className="w-5 xs:w-6 sm:w-7 md:w-8 h-5 xs:h-6 sm:h-7 md:h-8 text-primary group-hover:text-primary-foreground transition-colors" />
             </div>
             <h3 className="text-base xs:text-lg sm:text-xl font-heading font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">Visão</h3>
@@ -51,8 +62,8 @@ export function AboutSection() {
             </p>
           </div>
 
-          <div className="group bg-card rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 shadow-card hover:shadow-glow transition-all duration-500 border border-border/50">
-            <div className="w-10 xs:w-12 sm:w-14 md:w-16 h-10 xs:h-12 sm:h-14 md:h-16 bg-accent/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 xs:mb-4 sm:mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+          <div className="group bg-white/60 dark:bg-black/20 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/40 dark:border-white/10 hover:-translate-y-1">
+            <div className="w-10 xs:w-12 sm:w-14 md:w-16 h-10 xs:h-12 sm:h-14 md:h-16 bg-accent/10 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center mb-3 xs:mb-4 sm:mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300 border border-accent/20">
               <Target className="w-5 xs:w-6 sm:w-7 md:w-8 h-5 xs:h-6 sm:h-7 md:h-8 text-accent group-hover:text-accent-foreground transition-colors" />
             </div>
             <h3 className="text-base xs:text-lg sm:text-xl font-heading font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">Missão</h3>
@@ -61,8 +72,8 @@ export function AboutSection() {
             </p>
           </div>
 
-          <div className="group bg-card rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 shadow-card hover:shadow-glow transition-all duration-500 border border-border/50 xs:col-span-2 md:col-span-1">
-            <div className="w-10 xs:w-12 sm:w-14 md:w-16 h-10 xs:h-12 sm:h-14 md:h-16 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 xs:mb-4 sm:mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+          <div className="group bg-white/60 dark:bg-black/20 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/40 dark:border-white/10 hover:-translate-y-1 xs:col-span-2 md:col-span-1">
+            <div className="w-10 xs:w-12 sm:w-14 md:w-16 h-10 xs:h-12 sm:h-14 md:h-16 bg-primary/10 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center mb-3 xs:mb-4 sm:mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300 border border-primary/20">
               <Heart className="w-5 xs:w-6 sm:w-7 md:w-8 h-5 xs:h-6 sm:h-7 md:h-8 text-primary group-hover:text-primary-foreground transition-colors" />
             </div>
             <h3 className="text-base xs:text-lg sm:text-xl font-heading font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">Valores</h3>
