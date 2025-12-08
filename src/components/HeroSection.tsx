@@ -1,4 +1,4 @@
-import { Shield, Leaf, ArrowRight } from 'lucide-react';
+import { Shield, Leaf, ArrowRight, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBackground from '@/assets/hero-background.jpg';
 
@@ -61,7 +61,7 @@ export function HeroSection() {
           </p>
 
           <div
-            className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 animate-fade-up px-4 sm:px-0"
+            className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 animate-fade-up px-4 sm:px-0"
             style={{ animationDelay: '0.5s' }}
           >
             <Button asChild variant="heroPrimary" size="lg" className="w-full sm:w-auto sm:size-lg md:size-xl">
@@ -72,6 +72,12 @@ export function HeroSection() {
             </Button>
             <Button asChild variant="hero" size="lg" className="w-full sm:w-auto sm:size-lg md:size-xl">
               <a href="#servicos">Conheça nossos serviços</a>
+            </Button>
+            <Button asChild variant="hero" size="lg" className="w-full sm:w-auto sm:size-lg md:size-xl">
+              <a href="https://gmass.etreinare.com.br/home" target="_blank" rel="noopener noreferrer">
+                <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5" />
+                Ver nossos cursos
+              </a>
             </Button>
           </div>
         </div>
