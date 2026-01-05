@@ -75,12 +75,12 @@ export function CoursesSection() {
               alt="Treinamento presencial de segurança do trabalho"
               className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-4 sm:p-6">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 w-full">
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-3 sm:p-6">
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-3 sm:p-4 border border-white/20 w-full overflow-hidden">
+                <h3 className="text-sm sm:text-lg md:text-xl font-bold text-white mb-1 break-words">
                   Treinamentos presenciais
                 </h3>
-                <p className="text-white/80 text-xs sm:text-sm">
+                <p className="text-white/80 text-[11px] sm:text-sm">
                   Capacitação InCompany com instrutores especializados
                 </p>
               </div>
@@ -92,12 +92,12 @@ export function CoursesSection() {
               alt="Plataforma de cursos EAD"
               className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-accent/80 via-accent/20 to-transparent flex items-end p-4 sm:p-6">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 w-full">
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-accent-foreground mb-1">
+            <div className="absolute inset-0 bg-gradient-to-t from-accent/80 via-accent/20 to-transparent flex items-end p-3 sm:p-6">
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-3 sm:p-4 border border-white/20 w-full overflow-hidden">
+                <h3 className="text-sm sm:text-lg md:text-xl font-bold text-accent-foreground mb-1 break-words">
                   Cursos EAD
                 </h3>
-                <p className="text-accent-foreground/80 text-xs sm:text-sm">
+                <p className="text-accent-foreground/80 text-[11px] sm:text-sm">
                   Aprenda no seu ritmo com nossa plataforma online
                 </p>
               </div>
