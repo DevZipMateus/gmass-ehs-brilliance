@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Youtube, Facebook, Phone, Mail, Headphones } from 'lucide-react';
+import { Linkedin, Instagram, Phone, Mail, Headphones } from 'lucide-react';
 import logoGmass from '@/assets/logo-gmass.png';
 
 export function Footer() {
@@ -117,15 +117,6 @@ export function Footer() {
             {/* Social Icons */}
             <div className="flex gap-2 mt-4">
               <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
-                aria-label="Facebook"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a 
                 href="https://www.instagram.com/gmassoficial/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
@@ -142,15 +133,6 @@ export function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
-              </a>
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
-                aria-label="YouTube"
-              >
-                <Youtube className="w-4 h-4" />
               </a>
             </div>
           </div>
