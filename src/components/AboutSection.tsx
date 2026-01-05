@@ -66,7 +66,7 @@ export function AboutSection() {
             </div>
             <h3 className="text-base xs:text-lg sm:text-xl font-heading font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">Valores</h3>
             <p className="text-xs xs:text-sm sm:text-base text-muted-foreground leading-relaxed">
-              Atender de forma objetiva as legislações vigentes e normas institucionais.
+              Atender de forma transparente e objetiva as legislações vigentes e normas institucionais.
             </p>
           </div>
         </div>
