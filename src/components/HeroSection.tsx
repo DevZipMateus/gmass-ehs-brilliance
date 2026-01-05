@@ -60,7 +60,7 @@ export function HeroSection() {
             style={{ animationDelay: '0.3s' }}
           >
             <h2 className="text-sm xs:text-base sm:text-lg md:text-xl text-foreground/90 font-light">
-              Sua parceira especializada em segurança do trabalho, saúde ocupacional e gestão ambiental. Implantamos uma cultura de prevenção e garantimos o cumprimento das legislações vigentes.
+              Sua parceira especializada em segurança do trabalho, saúde ocupacional e meio ambiente. Com o formato de uma gestão administrativa e operacional, implantamos uma cultura de prevenção no cumprimento das legislações vigentes.
             </h2>
           </div>
 
