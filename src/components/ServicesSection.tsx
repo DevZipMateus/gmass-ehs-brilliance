@@ -295,14 +295,6 @@ export function ServicesSection() {
             })}
           </div>
         </div>
-
-        <div className="mt-6 xs:mt-8 sm:mt-12 text-center">
-          <Button asChild variant="default" size="lg" className="w-full xs:w-auto shadow-xl">
-            <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
-              Solicitar orçamento
-            </a>
-          </Button>
-        </div>
       </div>
     </section>
   );
