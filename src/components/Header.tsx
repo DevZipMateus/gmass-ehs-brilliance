@@ -128,35 +128,35 @@ export function Header() {
 
       {/* Logo com curva decorativa */}
       <div className="relative">
-        {/* Curva azul/verde - da esquerda inferior para direita superior */}
+        {/* Curva azul/verde - mais curta na esquerda, estendendo para direita */}
         <svg
-          className="absolute top-0 left-0 w-full h-[180px] sm:h-[240px] md:h-[300px]"
-          viewBox="0 0 1440 300"
+          className="absolute top-0 left-0 w-full h-[120px] sm:h-[150px] md:h-[180px]"
+          viewBox="0 0 1440 180"
           preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           {/* Curva azul principal */}
           <path
-            d="M0 0H0V300C0 300 100 280 200 250C350 200 500 120 700 70C900 20 1100 0 1300 0C1350 0 1400 0 1440 0V0H0Z"
+            d="M0 0V120C0 120 150 110 300 90C500 60 750 30 1000 15C1200 5 1350 0 1440 0V0H0Z"
             className="fill-primary"
           />
           {/* Linha verde accent no topo da curva */}
           <path
-            d="M0 300C0 300 100 280 200 250C350 200 500 120 700 70C900 20 1100 0 1300 0"
+            d="M0 120C0 120 150 110 300 90C500 60 750 30 1000 15C1200 5 1350 0 1440 0"
             className="stroke-accent"
-            strokeWidth="6"
+            strokeWidth="5"
             fill="none"
           />
         </svg>
 
         {/* Logo */}
-        <div className="relative z-10 pl-4 sm:pl-8 md:pl-12 pt-2">
+        <div className="relative z-10 pl-4 sm:pl-8 md:pl-12 pt-1 sm:pt-2">
           <a href="#inicio" className="inline-block">
             <img
               src={logoGmass}
               alt="Gmass Assessoria & Consultoria em EHS"
-              className="h-20 xs:h-24 sm:h-32 md:h-40 lg:h-48 w-auto"
+              className="h-16 xs:h-20 sm:h-24 md:h-28 lg:h-32 w-auto"
             />
           </a>
         </div>
