@@ -19,7 +19,10 @@ export function AboutSection() {
             Sobre a Gmass
           </h2>
           <p className="text-sm xs:text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-1">
-            Proporcionamos aos clientes a aplicação de uma gestão administrativa e operacional em segurança do trabalho e meio ambiente, garantindo o atendimento e cumprimento da legislação trabalhista.
+            Com mais de uma década de experiência, a G.mass é especializada em consultoria e assessoria em segurança do trabalho, saúde ocupacional e meio ambiente.
+          </p>
+          <p className="text-sm xs:text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-1 mt-2">
+            Nossa equipe de profissionais qualificados está preparada para atender às necessidades específicas de cada cliente, oferecendo soluções personalizadas e eficientes.
           </p>
         </div>
 
