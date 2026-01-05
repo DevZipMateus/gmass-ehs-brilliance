@@ -76,7 +76,7 @@ export function HeroHeader() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden absolute top-2 right-4 p-3 bg-primary-foreground/20 rounded-lg border border-primary-foreground/30"
+          className="lg:hidden absolute top-3 right-4 p-2 bg-primary-foreground/10 rounded-lg"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
