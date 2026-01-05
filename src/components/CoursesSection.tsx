@@ -73,7 +73,7 @@ export function CoursesSection() {
             <img
               src={trainingSessionImage}
               alt="Treinamento presencial de segurança do trabalho"
-              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover object-[center_30%] transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-3 xs:p-4 border border-white/20 w-full">
