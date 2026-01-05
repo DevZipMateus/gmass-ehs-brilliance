@@ -45,7 +45,7 @@ const services = [
   },
   {
     icon: Leaf,
-    title: 'Gestão ambiental',
+    title: 'Gestão operacional',
     description: 'Educação ambiental, perícia ambiental e assessoria em licenciamento.',
     color: 'accent',
   },
@@ -114,7 +114,7 @@ export function ServicesSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-accent/90 via-accent/40 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 xs:p-4 border border-white/20 w-full">
                 <h3 className="text-base xs:text-lg sm:text-xl font-bold text-accent-foreground mb-0.5 xs:mb-1">
-                  Gestão ambiental
+                  Gestão operacional
                 </h3>
                 <p className="text-accent-foreground/80 text-[10px] xs:text-xs sm:text-sm">
                   Compromisso com a sustentabilidade
