@@ -52,7 +52,7 @@ export function Header() {
           <img
             src={logoGmass}
             alt="Gmass Assessoria & Consultoria em EHS"
-            className="h-20 xs:h-24 sm:h-28 md:h-32 lg:h-40 w-auto"
+            className="h-14 xs:h-16 sm:h-20 md:h-24 lg:h-28 w-auto"
           />
         </a>
 
