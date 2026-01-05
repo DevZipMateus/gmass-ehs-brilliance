@@ -128,21 +128,25 @@ export function Header() {
 
       {/* Logo com curva decorativa */}
       <div className="relative">
-        {/* Curva azul/verde */}
+        {/* Curva azul/verde - da esquerda inferior para direita superior */}
         <svg
-          className="absolute top-0 left-0 w-full h-[200px] sm:h-[280px] md:h-[350px]"
-          viewBox="0 0 1440 350"
+          className="absolute top-0 left-0 w-full h-[180px] sm:h-[240px] md:h-[300px]"
+          viewBox="0 0 1440 300"
           preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Curva azul principal */}
           <path
-            d="M0 0H400C400 0 450 0 500 50C550 100 600 200 700 250C800 300 1000 320 1200 330C1300 335 1440 340 1440 340V350H0V0Z"
+            d="M0 0H0V300C0 300 100 280 200 250C350 200 500 120 700 70C900 20 1100 0 1300 0C1350 0 1400 0 1440 0V0H0Z"
             className="fill-primary"
           />
+          {/* Linha verde accent no topo da curva */}
           <path
-            d="M0 0H380C380 0 430 0 480 45C530 90 580 185 680 235C780 285 980 305 1180 315C1280 320 1440 325 1440 325V330C1440 330 1300 325 1200 320C1000 310 800 290 700 240C600 190 550 90 500 45C450 0 400 0 400 0H0V0Z"
-            className="fill-accent"
+            d="M0 300C0 300 100 280 200 250C350 200 500 120 700 70C900 20 1100 0 1300 0"
+            className="stroke-accent"
+            strokeWidth="6"
+            fill="none"
           />
         </svg>
 
