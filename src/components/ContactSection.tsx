@@ -207,7 +207,7 @@ export function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 xs:p-5 sm:p-6 md:p-8 border border-primary-foreground/20">
+          <div id="cadastro" className="bg-card/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 xs:p-5 sm:p-6 md:p-8 border border-primary-foreground/20">
             <h3 className="text-lg xs:text-xl sm:text-2xl font-heading font-bold text-center mb-2 xs:mb-3">
               Envie sua mensagem
             </h3>
