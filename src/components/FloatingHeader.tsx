@@ -57,7 +57,7 @@ export function FloatingHeader() {
             </a>
           ))}
           <Button asChild variant="heroPrimary" size="sm" className="whitespace-nowrap">
-            <a href="#contato">
+            <a href="#cadastro">
               Cadastro
             </a>
           </Button>
@@ -95,7 +95,7 @@ export function FloatingHeader() {
               </a>
             ))}
             <a
-              href="#contato"
+              href="#cadastro"
               className="text-foreground hover:text-primary hover:bg-primary/5 font-medium py-3 px-2 transition-colors rounded-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >

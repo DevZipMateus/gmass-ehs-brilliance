@@ -65,7 +65,7 @@ export function HeroHeader() {
             </a>
           ))}
           <a
-            href="#contato"
+            href="#cadastro"
             className="font-medium bg-accent text-accent-foreground px-4 py-2 rounded-full text-[15px] transition-colors hover:bg-accent/90 whitespace-nowrap"
           >
             Cadastro
@@ -109,7 +109,7 @@ export function HeroHeader() {
               </a>
             ))}
             <a
-              href="#contato"
+              href="#cadastro"
               className="text-foreground hover:text-primary hover:bg-primary/5 font-medium py-3 px-2 transition-colors rounded-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
