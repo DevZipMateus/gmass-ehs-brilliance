@@ -86,13 +86,14 @@ export function ServicesSection() {
           </p>
         </div>
 
-        {/* Featured images with glassmorphism overlays */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 xs:gap-4 sm:gap-6 mb-6 xs:mb-8 sm:mb-12">
-          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-xl">
+        {/* Gestão Administrativas - Image + Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
+          {/* Featured Image */}
+          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-xl lg:row-span-2">
             <img
               src={auditImage}
-              alt="Auditoria de segurança do trabalho"
-              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gestão administrativa de segurança do trabalho"
+              className="w-full h-48 xs:h-56 sm:h-64 lg:h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 xs:p-4 border border-white/20 w-full">
@@ -105,11 +106,46 @@ export function ServicesSection() {
               </div>
             </div>
           </div>
-          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-xl">
+
+          {/* Service Cards Grid */}
+          <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 xs:gap-4">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              const isPrimary = service.color === 'primary';
+
+              return (
+                <div
+                  key={index}
+                  className="group bg-white/60 dark:bg-black/20 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 xs:p-4 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-white/40 dark:border-white/10"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div
+                    className={`w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 ${
+                      isPrimary ? 'bg-primary/10 border-primary/20' : 'bg-accent/10 border-accent/20'
+                    } backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center mb-2 xs:mb-3 group-hover:scale-110 transition-transform duration-300 border`}
+                  >
+                    <Icon className={`w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 ${isPrimary ? 'text-primary' : 'text-accent'}`} />
+                  </div>
+                  <h3 className="text-xs xs:text-sm sm:text-base font-heading font-bold text-foreground mb-1 xs:mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-[9px] xs:text-[10px] sm:text-xs text-muted-foreground leading-relaxed line-clamp-3">
+                    {service.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Gestão Operacional - Placeholder for future cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
+          {/* Featured Image */}
+          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-xl lg:row-span-2">
             <img
               src={environmentalImage}
-              alt="Gestão ambiental e sustentabilidade"
-              className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gestão operacional e sustentabilidade"
+              className="w-full h-48 xs:h-56 sm:h-64 lg:h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-accent/90 via-accent/40 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 xs:p-4 border border-white/20 w-full">
@@ -122,36 +158,11 @@ export function ServicesSection() {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Glassmorphism service cards */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-6">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            const isPrimary = service.color === 'primary';
-
-            return (
-              <div
-                key={index}
-                className="group bg-white/60 dark:bg-black/20 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-white/40 dark:border-white/10"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div
-                  className={`w-8 xs:w-10 sm:w-12 md:w-14 h-8 xs:h-10 sm:h-12 md:h-14 ${
-                    isPrimary ? 'bg-primary/10 border-primary/20' : 'bg-accent/10 border-accent/20'
-                  } backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center mb-2 xs:mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-300 border`}
-                >
-                  <Icon className={`w-4 xs:w-5 sm:w-6 md:w-7 h-4 xs:h-5 sm:h-6 md:h-7 ${isPrimary ? 'text-primary' : 'text-accent'}`} />
-                </div>
-                <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold text-foreground mb-1 xs:mb-2 sm:mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            );
-          })}
+          {/* Placeholder for Gestão Operacional cards - will be added later */}
+          <div className="lg:col-span-2 flex items-center justify-center p-8 bg-white/30 dark:bg-black/10 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-white/20 min-h-[200px]">
+            <p className="text-muted-foreground text-sm">Cards da Gestão Operacional serão adicionados aqui</p>
+          </div>
         </div>
 
         <div className="mt-6 xs:mt-8 sm:mt-12 text-center">
