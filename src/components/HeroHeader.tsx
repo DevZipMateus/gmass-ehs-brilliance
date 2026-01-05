@@ -23,33 +23,33 @@ export function HeroHeader() {
         <div className="absolute top-0 left-0 right-0 h-12 sm:h-14 bg-primary" />
         
         <svg
-          className="w-full h-[100px] sm:h-[120px] md:h-[140px]"
-          viewBox="0 0 1440 140"
+          className="w-full h-[120px] sm:h-[150px] md:h-[180px]"
+          viewBox="0 0 1440 180"
           preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Curva azul principal - parte de cima reta, curva só na esquerda */}
+          {/* Curva azul principal */}
           <path
-            d="M0 0H1440V40C1440 40 1400 40 1300 40C1100 40 900 50 700 65C500 80 300 95 150 105C75 110 0 115 0 115V0Z"
+            d="M0 0H1440V50C1440 50 1400 50 1300 50C1100 55 900 70 700 95C500 120 300 145 150 160C75 168 0 175 0 175V0Z"
             className="fill-primary"
           />
-          {/* Linha verde accent */}
+          {/* Curva verde accent - acompanha a curva azul */}
           <path
-            d="M0 115C0 115 75 110 150 105C300 95 500 80 700 65C900 50 1100 40 1300 40C1400 40 1440 40 1440 40"
+            d="M0 175C0 175 75 168 150 160C300 145 500 120 700 95C900 70 1100 55 1300 50C1400 50 1440 50 1440 50"
             className="stroke-accent"
-            strokeWidth="4"
+            strokeWidth="5"
             fill="none"
           />
         </svg>
 
-        {/* Logo posicionado sobre a curva */}
+        {/* Logo maior posicionado sobre a curva */}
         <div className="absolute top-2 left-4 sm:left-8 md:left-12 z-10">
           <a href="#inicio" className="inline-block">
             <img
               src={logoGmass}
               alt="Gmass Assessoria & Consultoria em EHS"
-              className="h-14 xs:h-16 sm:h-20 md:h-24 w-auto"
+              className="h-20 xs:h-24 sm:h-28 md:h-36 lg:h-40 w-auto"
             />
           </a>
         </div>
