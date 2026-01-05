@@ -6,11 +6,110 @@ import {
   GraduationCap,
   Leaf,
   Building2,
-  AlertTriangle
+  AlertTriangle,
+  Truck,
+  Settings,
+  Flame,
+  Wind,
+  ArrowUpFromLine
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import auditImage from '@/assets/services-audit.jpg';
 import environmentalImage from '@/assets/environmental.jpg';
+
+const servicesAdmin = [
+  {
+    icon: Building2,
+    title: 'Implantação e gestão do SESMT',
+    description: 'Estruturação completa do serviço especializado em engenharia de segurança e medicina do trabalho conforme NR-4.',
+    color: 'primary',
+  },
+  {
+    icon: Users,
+    title: 'Gestão administrativa I',
+    description: 'Brigada de emergência, CIPA e gestão ambiental com acompanhamento especializado.',
+    color: 'accent',
+  },
+  {
+    icon: FileText,
+    title: 'Elaboração de documentos',
+    description: 'PGR, PCMSO, PPP, Ordens de Serviço, CAT, Licença Ambiental, CADRI, CLCB e e-Social.',
+    color: 'primary',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Treinamentos normativos',
+    description: 'Capacitações InCompany e EAD para NRs, integração de novos colaboradores e DDS/DSS.',
+    color: 'accent',
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'Auditoria interna',
+    description: 'Verificação de segurança, simulados de emergência e acompanhamento de conformidade.',
+    color: 'primary',
+  },
+  {
+    icon: Leaf,
+    title: 'Gestão operacional',
+    description: 'Educação ambiental, perícia ambiental e assessoria em licenciamento.',
+    color: 'accent',
+  },
+  {
+    icon: AlertTriangle,
+    title: 'Análise de riscos',
+    description: 'Identificação, avaliação e controle de riscos ocupacionais e ambientais.',
+    color: 'primary',
+  },
+  {
+    icon: Shield,
+    title: 'Consultoria em EHS',
+    description: 'Assessoria completa em saúde, segurança e meio ambiente para sua empresa.',
+    color: 'accent',
+  },
+];
+
+const servicesOperacional = [
+  {
+    icon: Users,
+    title: 'NR 05 - CIPA',
+    color: 'accent',
+  },
+  {
+    icon: Settings,
+    title: 'NR 10',
+    color: 'primary',
+  },
+  {
+    icon: Truck,
+    title: 'NR 11 – Transporte, Mov.',
+    color: 'accent',
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'NR 12',
+    color: 'primary',
+  },
+  {
+    icon: AlertTriangle,
+    title: 'NR 20',
+    color: 'accent',
+  },
+  {
+    icon: Flame,
+    title: 'NR 23 – Brigada de Incêndio',
+    color: 'primary',
+  },
+  {
+    icon: Wind,
+    title: 'NR 33 – Espaço Confinado',
+    color: 'accent',
+  },
+  {
+    icon: ArrowUpFromLine,
+    title: 'NR 35 – Trabalho em Altura',
+    color: 'primary',
+  },
+];
 
 const services = [
   {
@@ -109,7 +208,7 @@ export function ServicesSection() {
 
           {/* Service Cards Grid */}
           <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 xs:gap-4">
-            {services.map((service, index) => {
+            {servicesAdmin.map((service, index) => {
               const Icon = service.icon;
               const isPrimary = service.color === 'primary';
 
@@ -159,9 +258,30 @@ export function ServicesSection() {
             </div>
           </div>
 
-          {/* Placeholder for Gestão Operacional cards - will be added later */}
-          <div className="lg:col-span-2 flex items-center justify-center p-8 bg-white/30 dark:bg-black/10 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-white/20 min-h-[200px]">
-            <p className="text-muted-foreground text-sm">Cards da Gestão Operacional serão adicionados aqui</p>
+          <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 xs:gap-4">
+            {servicesOperacional.map((service, index) => {
+              const Icon = service.icon;
+              const isPrimary = service.color === 'primary';
+
+              return (
+                <div
+                  key={index}
+                  className="group bg-white/60 dark:bg-black/20 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 xs:p-4 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-white/40 dark:border-white/10"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div
+                    className={`w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 ${
+                      isPrimary ? 'bg-primary/10 border-primary/20' : 'bg-accent/10 border-accent/20'
+                    } backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center mb-2 xs:mb-3 group-hover:scale-110 transition-transform duration-300 border`}
+                  >
+                    <Icon className={`w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 ${isPrimary ? 'text-primary' : 'text-accent'}`} />
+                  </div>
+                  <h3 className="text-xs xs:text-sm sm:text-base font-heading font-bold text-foreground mb-1 xs:mb-2">
+                    {service.title}
+                  </h3>
+                </div>
+              );
+            })}
           </div>
         </div>
 
