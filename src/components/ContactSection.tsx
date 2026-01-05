@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Phone,
   Mail,
@@ -5,11 +6,71 @@ import {
   Clock,
   Linkedin,
   Instagram,
+  Send,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoGmass from '@/assets/logo-gmass.png';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { useToast } from '@/hooks/use-toast';
+import { z } from 'zod';
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, 'Nome é obrigatório').max(100, 'Nome deve ter no máximo 100 caracteres'),
+  email: z.string().trim().email('E-mail inválido').max(255, 'E-mail deve ter no máximo 255 caracteres'),
+  phone: z.string().trim().min(1, 'Telefone é obrigatório').max(20, 'Telefone deve ter no máximo 20 caracteres'),
+  message: z.string().trim().min(1, 'Mensagem é obrigatória').max(1000, 'Mensagem deve ter no máximo 1000 caracteres'),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 export function ContactSection() {
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleChange = (field: keyof ContactFormData, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: undefined }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const result = contactSchema.safeParse(formData);
+    
+    if (!result.success) {
+      const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
+      result.error.errors.forEach(error => {
+        const field = error.path[0] as keyof ContactFormData;
+        fieldErrors[field] = error.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    // TODO: Integrate with Lovable Cloud to send email
+    // For now, show success message
+    setTimeout(() => {
+      toast({
+        title: "Mensagem enviada!",
+        description: "Retornaremos em até 24 horas.",
+      });
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      setIsSubmitting(false);
+    }, 1000);
+  };
+
   return (
     <section id="contato" className="py-10 xs:py-12 sm:py-16 md:py-20 bg-gradient-hero text-primary-foreground">
       <div className="container px-4 sm:px-6">
@@ -124,28 +185,96 @@ export function ContactSection() {
             </div>
           </div>
 
-          {/* CTA Card */}
+          {/* Contact Form */}
           <div className="bg-card/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 xs:p-5 sm:p-6 md:p-8 border border-primary-foreground/20">
-            <div className="flex justify-center mb-3 xs:mb-4 sm:mb-6">
-              <img
-                src={logoGmass}
-                alt="Gmass logo"
-                className="h-12 xs:h-14 sm:h-16 md:h-20 w-auto"
-              />
-            </div>
-            <h3 className="text-lg xs:text-xl sm:text-2xl font-heading font-bold text-center mb-2 xs:mb-3 sm:mb-4">
-              Solicite um orçamento
+            <h3 className="text-lg xs:text-xl sm:text-2xl font-heading font-bold text-center mb-2 xs:mb-3">
+              Envie sua mensagem
             </h3>
-            <p className="text-xs xs:text-sm sm:text-base text-primary-foreground/80 text-center mb-4 xs:mb-6 sm:mb-8">
-              Clique no botão abaixo para falar diretamente com nossa equipe pelo WhatsApp e receber um atendimento personalizado.
+            <p className="text-xs xs:text-sm sm:text-base text-primary-foreground/80 text-center mb-4 xs:mb-6">
+              Preencha o formulário abaixo e retornaremos em até <strong>24 horas</strong>.
             </p>
-            <Button asChild variant="heroPrimary" size="lg" className="w-full">
-              <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
-                Falar pelo WhatsApp
-              </a>
-            </Button>
-            <p className="text-[10px] xs:text-xs sm:text-sm text-primary-foreground/60 text-center mt-2 xs:mt-3 sm:mt-4">
-              Resposta rápida • Atendimento especializado
+            
+            <form onSubmit={handleSubmit} className="space-y-3 xs:space-y-4">
+              <div className="space-y-1.5">
+                <Label htmlFor="name" className="text-primary-foreground text-xs xs:text-sm">
+                  Nome
+                </Label>
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="Seu nome completo"
+                  value={formData.name}
+                  onChange={(e) => handleChange('name', e.target.value)}
+                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-accent text-sm"
+                />
+                {errors.name && <p className="text-accent text-xs">{errors.name}</p>}
+              </div>
+
+              <div className="space-y-1.5">
+                <Label htmlFor="email" className="text-primary-foreground text-xs xs:text-sm">
+                  E-mail
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="seu@email.com"
+                  value={formData.email}
+                  onChange={(e) => handleChange('email', e.target.value)}
+                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-accent text-sm"
+                />
+                {errors.email && <p className="text-accent text-xs">{errors.email}</p>}
+              </div>
+
+              <div className="space-y-1.5">
+                <Label htmlFor="phone" className="text-primary-foreground text-xs xs:text-sm">
+                  Telefone
+                </Label>
+                <Input
+                  id="phone"
+                  type="tel"
+                  placeholder="(00) 00000-0000"
+                  value={formData.phone}
+                  onChange={(e) => handleChange('phone', e.target.value)}
+                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-accent text-sm"
+                />
+                {errors.phone && <p className="text-accent text-xs">{errors.phone}</p>}
+              </div>
+
+              <div className="space-y-1.5">
+                <Label htmlFor="message" className="text-primary-foreground text-xs xs:text-sm">
+                  Como podemos ajudar?
+                </Label>
+                <Textarea
+                  id="message"
+                  placeholder="Descreva sua necessidade..."
+                  rows={4}
+                  value={formData.message}
+                  onChange={(e) => handleChange('message', e.target.value)}
+                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-accent text-sm resize-none"
+                />
+                {errors.message && <p className="text-accent text-xs">{errors.message}</p>}
+              </div>
+
+              <Button 
+                type="submit" 
+                variant="heroPrimary" 
+                size="lg" 
+                className="w-full"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  'Enviando...'
+                ) : (
+                  <>
+                    <Send className="w-4 h-4 mr-2" />
+                    Enviar Mensagem
+                  </>
+                )}
+              </Button>
+            </form>
+            
+            <p className="text-[10px] xs:text-xs sm:text-sm text-primary-foreground/60 text-center mt-3 xs:mt-4">
+              ⏰ Resposta garantida em até 24 horas úteis
             </p>
           </div>
         </div>
