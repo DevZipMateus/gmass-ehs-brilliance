@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Phone, Mail, Headphones } from 'lucide-react';
+import { Linkedin, Instagram, Mail, Headphones } from 'lucide-react';
 import logoGmass from '@/assets/logo-gmass.png';
 
 export function Footer() {
@@ -88,17 +88,6 @@ export function Footer() {
               INSTITUCIONAIS
             </h4>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-accent flex-shrink-0" />
-                <a 
-                  href="https://wa.me/5515991463756" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-white/60 hover:text-accent transition-colors text-xs sm:text-sm"
-                >
-                  (15) 99146-3756 (Somente WhatsApp)
-                </a>
-              </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-accent flex-shrink-0" />
                 <a 
