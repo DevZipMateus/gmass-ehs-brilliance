@@ -74,7 +74,7 @@ export function HeroHeader() {
             href="https://wa.me/5515991463756"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-primary-foreground/90 hover:text-accent text-[15px] transition-colors whitespace-nowrap"
+            className="font-medium bg-accent text-accent-foreground px-4 py-2 rounded-full text-[15px] transition-colors hover:bg-accent/90 whitespace-nowrap"
           >
             Fale Conosco
           </a>
