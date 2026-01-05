@@ -19,7 +19,7 @@ export function HeroHeader() {
       {/* Barra azul no topo + curva */}
       <div className="relative">
         {/* Fundo azul que cobre toda navegação */}
-        <div className="absolute top-0 left-0 right-0 h-12 sm:h-14 bg-primary" />
+        <div className="absolute top-0 left-0 right-0 h-14 sm:h-14 bg-primary" />
         
         <svg
           className="w-full h-[120px] sm:h-[150px] md:h-[180px]"
