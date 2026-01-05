@@ -30,7 +30,7 @@ export function HeroSection() {
         <div className="absolute bottom-20 right-10 w-60 sm:w-96 h-60 sm:h-96 bg-primary rounded-full blur-3xl animate-float-slow" />
       </div>
 
-      <div className="container relative pt-[140px] sm:pt-[160px] md:pt-[180px] lg:pt-32 pb-12 xs:pb-16 sm:pb-20 px-4 sm:px-6">
+      <div className="container relative pt-[180px] sm:pt-[200px] md:pt-[220px] lg:pt-40 pb-12 xs:pb-16 sm:pb-20 px-4 sm:px-6">
         <div className="max-w-4xl lg:max-w-2xl lg:ml-0 mx-auto lg:mx-0 text-center lg:text-left">
           {/* Glassmorphism badges */}
           <div
