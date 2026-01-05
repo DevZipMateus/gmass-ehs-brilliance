@@ -60,7 +60,7 @@ export function HeroHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="font-medium text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors whitespace-nowrap"
+              className="font-medium text-primary-foreground/90 hover:text-accent text-[15px] transition-colors whitespace-nowrap"
             >
               {link.label}
             </a>
@@ -69,7 +69,7 @@ export function HeroHeader() {
             href="https://wa.me/5515991463756"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors whitespace-nowrap"
+            className="font-medium text-primary-foreground/90 hover:text-accent text-[15px] transition-colors whitespace-nowrap"
           >
             Fale Conosco
           </a>
