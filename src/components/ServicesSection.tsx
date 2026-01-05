@@ -72,41 +72,49 @@ const servicesOperacional = [
   {
     icon: Users,
     title: 'NR 05 - CIPA',
+    description: 'Comissão Interna de Prevenção de Acidentes e assédio.',
     color: 'accent',
   },
   {
     icon: Settings,
     title: 'NR 10',
+    description: 'Segurança em instalações e serviços em eletricidade.',
     color: 'primary',
   },
   {
     icon: Truck,
     title: 'NR 11 – Transporte, Mov.',
+    description: 'Transporte, movimentação, armazenagem e manuseio de materiais.',
     color: 'accent',
   },
   {
     icon: ClipboardCheck,
     title: 'NR 12',
+    description: 'Segurança no trabalho em máquinas e equipamentos.',
     color: 'primary',
   },
   {
     icon: AlertTriangle,
     title: 'NR 20',
+    description: 'Segurança com inflamáveis e combustíveis.',
     color: 'accent',
   },
   {
     icon: Flame,
     title: 'NR 23 – Brigada de Incêndio',
+    description: 'Proteção contra incêndios e formação de brigadas.',
     color: 'primary',
   },
   {
     icon: Wind,
     title: 'NR 33 – Espaço Confinado',
+    description: 'Segurança em espaços confinados.',
     color: 'accent',
   },
   {
     icon: ArrowUpFromLine,
     title: 'NR 35 – Trabalho em Altura',
+    description: 'Proteção para trabalhos acima de 2 metros.',
     color: 'primary',
   },
 ];
@@ -279,6 +287,9 @@ export function ServicesSection() {
                   <h3 className="text-xs xs:text-sm sm:text-base font-heading font-bold text-foreground mb-1 xs:mb-2">
                     {service.title}
                   </h3>
+                  <p className="text-[9px] xs:text-[10px] sm:text-xs text-muted-foreground leading-relaxed line-clamp-3">
+                    {service.description}
+                  </p>
                 </div>
               );
             })}
