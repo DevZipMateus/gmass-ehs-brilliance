@@ -41,6 +41,27 @@ export function CoursesSection() {
       </div>
 
       <div className="container px-4 sm:px-6 relative">
+        {/* Diferenciais - Features grid at top */}
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 md:gap-8 mb-8 xs:mb-10 sm:mb-12 md:mb-16">
+          {courseFeatures.map((feature, index) => (
+            <div
+              key={index}
+              className={`group bg-white/10 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-xl hover:-translate-y-1 ${index === 2 ? 'xs:col-span-2 md:col-span-1' : ''}`}
+            >
+              <div className="w-10 xs:w-12 sm:w-14 md:w-16 h-10 xs:h-12 sm:h-14 md:h-16 bg-accent/30 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center mb-3 xs:mb-4 sm:mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300 border border-accent/20">
+                <feature.icon className="w-5 xs:w-6 sm:w-7 md:w-8 h-5 xs:h-6 sm:h-7 md:h-8 text-accent group-hover:text-accent-foreground transition-colors" />
+              </div>
+              <h3 className="text-base xs:text-lg sm:text-xl font-heading font-bold text-primary-foreground mb-1 xs:mb-2 sm:mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-xs xs:text-sm sm:text-base text-primary-foreground/70 leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Title section */}
         <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
           <span className="inline-flex items-center gap-1.5 xs:gap-2 px-3 py-1 xs:py-1.5 bg-white/10 backdrop-blur-md text-primary-foreground rounded-full text-xs sm:text-sm font-semibold mb-3 border border-white/20 shadow-lg">
             <GraduationCap className="w-3.5 xs:w-4 h-3.5 xs:h-4" />
@@ -91,26 +112,6 @@ export function CoursesSection() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Glassmorphism features grid */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 md:gap-8 mb-8 xs:mb-10 sm:mb-12 md:mb-16">
-          {courseFeatures.map((feature, index) => (
-            <div
-              key={index}
-              className={`group bg-white/10 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-xl hover:-translate-y-1 ${index === 2 ? 'xs:col-span-2 md:col-span-1' : ''}`}
-            >
-              <div className="w-10 xs:w-12 sm:w-14 md:w-16 h-10 xs:h-12 sm:h-14 md:h-16 bg-accent/30 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center mb-3 xs:mb-4 sm:mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300 border border-accent/20">
-                <feature.icon className="w-5 xs:w-6 sm:w-7 md:w-8 h-5 xs:h-6 sm:h-7 md:h-8 text-accent group-hover:text-accent-foreground transition-colors" />
-              </div>
-              <h3 className="text-base xs:text-lg sm:text-xl font-heading font-bold text-primary-foreground mb-1 xs:mb-2 sm:mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-xs xs:text-sm sm:text-base text-primary-foreground/70 leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
         </div>
 
         {/* Glassmorphism courses list and CTA */}
