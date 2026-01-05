@@ -57,6 +57,11 @@ export function FloatingHeader() {
             </a>
           ))}
           <Button asChild variant="heroPrimary" size="sm" className="whitespace-nowrap">
+            <a href="#contato">
+              Cadastro
+            </a>
+          </Button>
+          <Button asChild variant="heroPrimary" size="sm" className="whitespace-nowrap">
             <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
               Fale conosco
             </a>
@@ -89,6 +94,13 @@ export function FloatingHeader() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="#contato"
+              className="text-foreground hover:text-primary hover:bg-primary/5 font-medium py-3 px-2 transition-colors rounded-lg"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Cadastro
+            </a>
             <Button asChild variant="default" size="lg" className="mt-3 w-full">
               <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
                 Fale conosco
