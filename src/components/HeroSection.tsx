@@ -1,5 +1,6 @@
 import { Shield, Leaf, ArrowRight, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { HeroHeader } from '@/components/HeroHeader';
 import heroBackground from '@/assets/hero-background.jpg';
 
 export function HeroSection() {
@@ -8,6 +9,9 @@ export function HeroSection() {
       id="inicio"
       className="relative min-h-screen flex items-center overflow-hidden bg-background"
     >
+      {/* Hero Header com curva */}
+      <HeroHeader />
+
       {/* Hero image positioned to the right/bottom of the curved header */}
       <div
         className="absolute top-0 right-0 bottom-0 left-0 lg:left-[30%] bg-cover bg-center bg-no-repeat"
@@ -26,7 +30,7 @@ export function HeroSection() {
         <div className="absolute bottom-20 right-10 w-60 sm:w-96 h-60 sm:h-96 bg-primary rounded-full blur-3xl animate-float-slow" />
       </div>
 
-      <div className="container relative pt-[160px] sm:pt-[180px] md:pt-[200px] lg:pt-32 pb-12 xs:pb-16 sm:pb-20 px-4 sm:px-6">
+      <div className="container relative pt-[140px] sm:pt-[160px] md:pt-[180px] lg:pt-32 pb-12 xs:pb-16 sm:pb-20 px-4 sm:px-6">
         <div className="max-w-4xl lg:max-w-2xl lg:ml-0 mx-auto lg:mx-0 text-center lg:text-left">
           {/* Glassmorphism badges */}
           <div
