@@ -80,100 +80,102 @@ export function ContactSection() {
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 xs:gap-8 sm:gap-10 md:gap-12 items-start">
-          {/* Contact Info */}
-          <div className="space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8">
-            <div className="flex items-start gap-2.5 xs:gap-3 sm:gap-4">
-              <div className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-accent/20 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                <Phone className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 text-accent" />
+        <div className="grid lg:grid-cols-2 gap-6 xs:gap-8 sm:gap-10 md:gap-12 items-stretch">
+          {/* Contact Info Card */}
+          <div className="bg-card/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 xs:p-5 sm:p-6 md:p-8 border border-primary-foreground/20 flex flex-col">
+            <div className="space-y-4 xs:space-y-5 sm:space-y-6 flex-grow">
+              <div className="flex items-start gap-2.5 xs:gap-3 sm:gap-4">
+                <div className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-accent/20 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-0.5">
+                    Telefone / WhatsApp
+                  </h3>
+                  <a
+                    href="https://wa.me/5515991463756"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs xs:text-sm sm:text-base text-primary-foreground/80 hover:text-accent transition-colors"
+                  >
+                    (15) 99146-3756
+                  </a>
+                </div>
               </div>
-              <div>
-                <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-0.5">
-                  Telefone / WhatsApp
-                </h3>
-                <a
-                  href="https://wa.me/5515991463756"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs xs:text-sm sm:text-base text-primary-foreground/80 hover:text-accent transition-colors"
-                >
-                  (15) 99146-3756
-                </a>
+
+              <div className="flex items-start gap-2.5 xs:gap-3 sm:gap-4">
+                <div className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-accent/20 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 text-accent" />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-0.5">
+                    E-mail
+                  </h3>
+                  <a
+                    href="mailto:ricardoandremonteiro@gmail.com"
+                    className="text-xs xs:text-sm sm:text-base text-primary-foreground/80 hover:text-accent transition-colors break-all"
+                  >
+                    ricardoandremonteiro@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5 xs:gap-3 sm:gap-4">
+                <div className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-accent/20 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-0.5">
+                    Endereço
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-base text-primary-foreground/80">
+                    Três de Março, 2025 - Aparecidinha
+                    <br />
+                    Sorocaba - SP
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5 xs:gap-3 sm:gap-4">
+                <div className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-accent/20 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-0.5">
+                    Horário de funcionamento
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-base text-primary-foreground/80">
+                    Segunda a sexta: 08h às 22h
+                    <br />
+                    Sábado: 09h às 17h
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="flex items-start gap-2.5 xs:gap-3 sm:gap-4">
-              <div className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-accent/20 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                <Mail className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 text-accent" />
-              </div>
-              <div className="min-w-0">
-                <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-0.5">
-                  E-mail
-                </h3>
-                <a
-                  href="mailto:ricardoandremonteiro@gmail.com"
-                  className="text-xs xs:text-sm sm:text-base text-primary-foreground/80 hover:text-accent transition-colors break-all"
-                >
-                  ricardoandremonteiro@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-2.5 xs:gap-3 sm:gap-4">
-              <div className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-accent/20 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 text-accent" />
-              </div>
-              <div>
-                <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-0.5">
-                  Endereço
-                </h3>
-                <p className="text-xs xs:text-sm sm:text-base text-primary-foreground/80">
-                  Três de Março, 2025 - Aparecidinha
-                  <br />
-                  Sorocaba - SP
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-2.5 xs:gap-3 sm:gap-4">
-              <div className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-accent/20 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                <Clock className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 text-accent" />
-              </div>
-              <div>
-                <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-0.5">
-                  Horário de funcionamento
-                </h3>
-                <p className="text-xs xs:text-sm sm:text-base text-primary-foreground/80">
-                  Segunda a sexta: 08h às 22h
-                  <br />
-                  Sábado: 09h às 17h
-                </p>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="pt-2">
-              <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-2 xs:mb-3 sm:mb-4">
-                Redes sociais
+            {/* Social Links Card */}
+            <div className="mt-6 pt-6 border-t border-primary-foreground/20">
+              <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-3 xs:mb-4 text-center">
+                Siga-nos nas redes sociais
               </h3>
-              <div className="flex gap-2 xs:gap-3 sm:gap-4">
+              <div className="flex justify-center gap-3 xs:gap-4 sm:gap-5">
                 <a
                   href="https://www.linkedin.com/in/g-mass-assessoria-e-consultoria-em-ehs-7187331a5/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-primary-foreground/10 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center hover:bg-accent transition-colors border border-primary-foreground/20"
+                  className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="w-4 xs:w-4.5 sm:w-5 h-4 xs:h-4.5 sm:h-5" />
+                  <Linkedin className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent" />
                 </a>
                 <a
                   href="https://www.instagram.com/gmassoficial/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 xs:w-10 sm:w-12 h-9 xs:h-10 sm:h-12 bg-primary-foreground/10 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center hover:bg-accent transition-colors border border-primary-foreground/20"
+                  className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-4 xs:w-4.5 sm:w-5 h-4 xs:h-4.5 sm:h-5" />
+                  <Instagram className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent" />
                 </a>
               </div>
             </div>
