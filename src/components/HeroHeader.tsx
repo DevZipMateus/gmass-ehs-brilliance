@@ -76,7 +76,7 @@ export function HeroHeader() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden absolute top-4 right-4 p-2 bg-primary-foreground/10 rounded-lg"
+          className="lg:hidden absolute top-2 right-4 p-3 bg-primary-foreground/20 rounded-lg border border-primary-foreground/30"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
@@ -90,7 +90,7 @@ export function HeroHeader() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-[100px] sm:top-[120px] right-4 left-4 bg-background shadow-lg rounded-2xl overflow-hidden z-50 animate-fade-in">
+        <div className="lg:hidden absolute top-14 right-4 left-4 bg-background shadow-lg rounded-2xl overflow-hidden z-50 animate-fade-in">
           <nav className="py-4 flex flex-col gap-1 px-4">
             {navLinks.map((link) => (
               <a
