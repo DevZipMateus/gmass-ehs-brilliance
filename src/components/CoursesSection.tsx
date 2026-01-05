@@ -76,11 +76,11 @@ export function CoursesSection() {
               className="w-full h-40 xs:h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-3 xs:p-4 border border-white/20 w-full">
-                <h3 className="text-base xs:text-lg sm:text-xl font-bold text-white mb-0.5 xs:mb-1">
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-2 xs:p-3 sm:p-4 border border-white/20 w-full">
+                <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-bold text-white mb-0.5 xs:mb-1 leading-tight">
                   Treinamentos presenciais
                 </h3>
-                <p className="text-white/80 text-[10px] xs:text-xs sm:text-sm">
+                <p className="text-white/80 text-[9px] xs:text-[10px] sm:text-xs md:text-sm leading-snug">
                   Capacitação InCompany com instrutores especializados
                 </p>
               </div>
