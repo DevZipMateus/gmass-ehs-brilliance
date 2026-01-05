@@ -114,6 +114,15 @@ export function CoursesSection() {
           </div>
         </div>
 
+        {/* Solicitar orçamento button */}
+        <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
+          <Button asChild variant="heroPrimary" size="lg" className="w-full xs:w-auto shadow-xl">
+            <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
+              Solicitar orçamento
+            </a>
+          </Button>
+        </div>
+
         {/* Glassmorphism courses list and CTA */}
         <div className="grid lg:grid-cols-2 gap-6 xs:gap-8 sm:gap-10 md:gap-12 items-center">
           <div className="bg-white/10 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 border border-white/20 shadow-2xl">
