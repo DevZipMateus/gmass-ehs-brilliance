@@ -197,10 +197,10 @@ export function ContactSection() {
                         href="https://www.linkedin.com/in/g-mass-assessoria-e-consultoria-em-ehs-7187331a5/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
+                        className="group w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
                         aria-label="LinkedIn"
                       >
-                        <Linkedin className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent" />
+                        <Linkedin className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent group-hover:text-accent-foreground transition-colors" />
                       </a>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -213,10 +213,10 @@ export function ContactSection() {
                         href="https://www.instagram.com/gmassoficial/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
+                        className="group w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
                         aria-label="Instagram"
                       >
-                        <Instagram className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent" />
+                        <Instagram className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent group-hover:text-accent-foreground transition-colors" />
                       </a>
                     </TooltipTrigger>
                     <TooltipContent>

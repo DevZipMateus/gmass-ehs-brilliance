@@ -129,10 +129,10 @@ export function Footer() {
                       href="https://www.instagram.com/gmassoficial/" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
+                      className="group w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
                       aria-label="Instagram"
                     >
-                      <Instagram className="w-4 h-4" />
+                      <Instagram className="w-4 h-4 group-hover:text-accent-foreground transition-colors" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>
@@ -145,10 +145,10 @@ export function Footer() {
                       href="https://www.linkedin.com/in/g-mass-assessoria-e-consultoria-em-ehs-7187331a5/" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
+                      className="group w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
                       aria-label="LinkedIn"
                     >
-                      <Linkedin className="w-4 h-4" />
+                      <Linkedin className="w-4 h-4 group-hover:text-accent-foreground transition-colors" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>
