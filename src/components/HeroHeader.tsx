@@ -34,11 +34,11 @@ export function HeroHeader() {
             d="M0 0H1440V50C1440 50 1400 50 1300 50C1100 55 900 70 700 95C500 120 300 145 150 160C75 168 0 175 0 175V0Z"
             className="fill-primary"
           />
-          {/* Curva verde accent - acompanha toda a borda da curva azul incluindo o topo */}
+          {/* Curva verde accent - acompanha a curva azul */}
           <path
-            d="M1440 55C1440 55 1400 55 1300 55C1100 60 900 75 700 100C500 125 300 150 150 165C75 173 0 180 0 180"
+            d="M0 175C0 175 75 168 150 160C300 145 500 120 700 95C900 70 1100 55 1300 50C1400 50 1440 50 1440 50"
             className="stroke-accent"
-            strokeWidth="6"
+            strokeWidth="5"
             fill="none"
           />
         </svg>
