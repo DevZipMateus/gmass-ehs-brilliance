@@ -13,6 +13,12 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { z } from 'zod';
 import { supabaseClient } from '@/lib/supabase';
 
@@ -183,26 +189,42 @@ export function ContactSection() {
               <h3 className="text-sm xs:text-base sm:text-lg font-heading font-bold mb-3 xs:mb-4 text-center">
                 Siga-nos nas redes sociais
               </h3>
-              <div className="flex justify-center gap-3 xs:gap-4 sm:gap-5">
-                <a
-                  href="https://www.linkedin.com/in/g-mass-assessoria-e-consultoria-em-ehs-7187331a5/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent" />
-                </a>
-                <a
-                  href="https://www.instagram.com/gmassoficial/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent" />
-                </a>
-              </div>
+              <TooltipProvider>
+                <div className="flex justify-center gap-3 xs:gap-4 sm:gap-5">
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href="https://www.linkedin.com/in/g-mass-assessoria-e-consultoria-em-ehs-7187331a5/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
+                        aria-label="LinkedIn"
+                      >
+                        <Linkedin className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent" />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Siga-nos no LinkedIn</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href="https://www.instagram.com/gmassoficial/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-accent/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 border border-accent/30"
+                        aria-label="Instagram"
+                      >
+                        <Instagram className="w-5 xs:w-6 sm:w-7 h-5 xs:h-6 sm:h-7 text-accent" />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Siga-nos no Instagram</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </div>
+              </TooltipProvider>
             </div>
           </div>
 
