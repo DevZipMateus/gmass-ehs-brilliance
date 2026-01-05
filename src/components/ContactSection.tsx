@@ -14,6 +14,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
+import { supabase } from '@/integrations/supabase/client';
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, 'Nome é obrigatório').max(100, 'Nome deve ter no máximo 100 caracteres'),
@@ -59,16 +60,40 @@ export function ContactSection() {
 
     setIsSubmitting(true);
     
-    // TODO: Integrate with Lovable Cloud to send email
-    // For now, show success message
-    setTimeout(() => {
-      toast({
-        title: "Mensagem enviada!",
-        description: "Retornaremos em até 24 horas.",
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          nome: formData.name,
+          email: formData.email,
+          telefone: formData.phone,
+          mensagem: formData.message,
+        },
       });
-      setFormData({ name: '', email: '', phone: '', message: '' });
+
+      if (error) {
+        console.error('Erro ao enviar email:', error);
+        toast({
+          title: "Erro ao enviar mensagem",
+          description: "Ocorreu um erro. Tente novamente mais tarde.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Retornaremos em até 24 horas.",
+        });
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      }
+    } catch (err) {
+      console.error('Erro ao enviar email:', err);
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Ocorreu um erro. Tente novamente mais tarde.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
