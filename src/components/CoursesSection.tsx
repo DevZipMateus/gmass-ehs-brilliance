@@ -1,4 +1,4 @@
-import { GraduationCap, BookOpen, Award, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { GraduationCap, BookOpen, Award, Users, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import trainingSessionImage from '@/assets/training-session.jpg';
 import elearningImage from '@/assets/elearning-course.jpg';
@@ -19,15 +19,6 @@ const courseFeatures = [
     title: 'Instrutores qualificados',
     description: 'Profissionais experientes e certificados na área',
   },
-];
-
-const coursesList = [
-  'NR-10 - Segurança em instalações elétricas',
-  'NR-35 - Trabalho em altura',
-  'NR-33 - Espaços confinados',
-  'NR-11 - Operador de empilhadeira',
-  'CIPA - Comissão interna de prevenção de acidentes',
-  'Brigada de incêndio',
 ];
 
 export function CoursesSection() {
@@ -123,47 +114,31 @@ export function CoursesSection() {
           </Button>
         </div>
 
-        {/* Glassmorphism courses list and CTA */}
-        <div className="grid lg:grid-cols-2 gap-6 xs:gap-8 sm:gap-10 md:gap-12 items-center">
-          <div className="bg-white/10 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 border border-white/20 shadow-2xl">
-            <h3 className="text-lg xs:text-xl sm:text-2xl font-heading font-bold text-primary-foreground mb-3 xs:mb-4 sm:mb-6">
-              Alguns de nossos cursos
-            </h3>
-            <ul className="space-y-2 xs:space-y-3 sm:space-y-4">
-              {coursesList.map((course, index) => (
-                <li key={index} className="flex items-start gap-2 xs:gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-2 xs:p-3 border border-white/10">
-                  <CheckCircle className="w-4 xs:w-5 h-4 xs:h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-xs xs:text-sm sm:text-base text-primary-foreground/90">{course}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="text-center lg:text-left">
-            <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-heading font-bold text-primary-foreground mb-3 xs:mb-4 sm:mb-6 drop-shadow-lg">
-              Acesse nossa plataforma de cursos
-            </h3>
-            <p className="text-sm xs:text-base sm:text-lg text-primary-foreground/80 mb-4 xs:mb-6 sm:mb-8">
-              Explore todos os nossos cursos disponíveis, inscreva-se e comece a aprender hoje mesmo. 
-              Nossa plataforma oferece uma experiência completa de aprendizado online.
-            </p>
-            <Button
-              asChild
-              variant="heroPrimary"
-              size="lg"
-              className="w-full xs:w-auto shadow-2xl"
+        {/* CTA to courses platform */}
+        <div className="text-center">
+          <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-heading font-bold text-primary-foreground mb-3 xs:mb-4 sm:mb-6 drop-shadow-lg">
+            Acesse nossa plataforma de cursos
+          </h3>
+          <p className="text-sm xs:text-base sm:text-lg text-primary-foreground/80 mb-4 xs:mb-6 sm:mb-8 max-w-2xl mx-auto">
+            Explore todos os nossos cursos disponíveis, inscreva-se e comece a aprender hoje mesmo. 
+            Nossa plataforma oferece uma experiência completa de aprendizado online.
+          </p>
+          <Button
+            asChild
+            variant="heroPrimary"
+            size="lg"
+            className="w-full xs:w-auto shadow-2xl"
+          >
+            <a
+              href="https://gmass.etreinare.com.br/home"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <a
-                href="https://gmass.etreinare.com.br/home"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GraduationCap className="w-4 xs:w-5 h-4 xs:h-5" />
-                Ver nossos cursos
-                <ArrowRight className="w-4 xs:w-5 h-4 xs:h-5" />
-              </a>
-            </Button>
-          </div>
+              <GraduationCap className="w-4 xs:w-5 h-4 xs:h-5" />
+              Ver nossos cursos
+              <ArrowRight className="w-4 xs:w-5 h-4 xs:h-5" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>
