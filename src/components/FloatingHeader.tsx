@@ -56,11 +56,12 @@ export function FloatingHeader() {
               {link.label}
             </a>
           ))}
-          <Button asChild variant="heroPrimary" size="sm" className="whitespace-nowrap">
-            <a href="#cadastro">
-              Cadastro
-            </a>
-          </Button>
+          <a
+            href="#cadastro"
+            className="font-medium text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors whitespace-nowrap"
+          >
+            Cadastro
+          </a>
           <Button asChild variant="heroPrimary" size="sm" className="whitespace-nowrap">
             <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
               Fale conosco
