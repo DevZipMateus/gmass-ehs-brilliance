@@ -14,7 +14,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
-import { supabase } from '@/integrations/supabase/client';
+import { supabaseClient } from '@/lib/supabase';
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, 'Nome é obrigatório').max(100, 'Nome deve ter no máximo 100 caracteres'),
@@ -61,7 +61,7 @@ export function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+      const { data, error } = await supabaseClient.functions.invoke('send-contact-email', {
         body: {
           nome: formData.name,
           email: formData.email,
