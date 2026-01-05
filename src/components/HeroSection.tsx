@@ -1,5 +1,5 @@
-import { Shield, Leaf, ArrowRight, GraduationCap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Shield, Leaf } from 'lucide-react';
+
 import { HeroHeader } from '@/components/HeroHeader';
 import heroBackground from '@/assets/hero-background.jpg';
 
@@ -71,26 +71,6 @@ export function HeroSection() {
             "Agora é com a gente!!!"
           </p>
 
-          <div
-            className="flex flex-col gap-2 xs:gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start sm:gap-4 animate-fade-up px-2 xs:px-4 sm:px-0"
-            style={{ animationDelay: '0.5s' }}
-          >
-            <Button asChild variant="default" size="default" className="w-full sm:w-auto text-sm xs:text-base shadow-xl">
-              <a href="https://wa.me/5515991463756" target="_blank" rel="noopener noreferrer">
-                Solicite um orçamento
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="default" className="w-full sm:w-auto text-sm xs:text-base">
-              <a href="#servicos">Conheça nossos serviços</a>
-            </Button>
-            <Button asChild variant="outline" size="default" className="w-full sm:w-auto text-sm xs:text-base">
-              <a href="https://gmass.etreinare.com.br/home" target="_blank" rel="noopener noreferrer">
-                <GraduationCap className="w-4 h-4" />
-                Ver nossos cursos
-              </a>
-            </Button>
-          </div>
         </div>
       </div>
 
