@@ -78,12 +78,6 @@ export function ContactSection() {
           <span className="inline-block px-3 py-1 xs:py-1.5 bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground rounded-full text-xs sm:text-sm font-semibold mb-3 border border-primary-foreground/20">
             Fale conosco
           </span>
-          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-2 xs:mb-3 sm:mb-4">
-            Entre em contato
-          </h2>
-          <p className="text-sm xs:text-base sm:text-lg text-primary-foreground/80 max-w-3xl mx-auto px-1">
-            Estamos prontos para atender sua empresa e oferecer as melhores soluções em segurança do trabalho e meio ambiente.
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6 xs:gap-8 sm:gap-10 md:gap-12 items-start">
