@@ -54,7 +54,7 @@ export function HeroHeader() {
         </div>
 
         {/* Navegação desktop - posicionada no topo direito */}
-        <nav className="hidden lg:flex absolute top-4 right-8 xl:right-12 items-center gap-4 xl:gap-6">
+        <nav className="hidden lg:flex absolute top-3 right-12 xl:right-16 items-center gap-4 xl:gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
