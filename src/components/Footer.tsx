@@ -1,5 +1,11 @@
 import { Linkedin, Instagram, Phone, Mail, Headphones } from 'lucide-react';
 import logoGmass from '@/assets/logo-gmass.png';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 export function Footer() {
   return (
@@ -115,26 +121,42 @@ export function Footer() {
             </ul>
 
             {/* Social Icons */}
-            <div className="flex gap-2 mt-4">
-              <a 
-                href="https://www.instagram.com/gmassoficial/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
-                aria-label="Instagram"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/g-mass-assessoria-e-consultoria-em-ehs-7187331a5/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-            </div>
+            <TooltipProvider>
+              <div className="flex gap-2 mt-4">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a 
+                      href="https://www.instagram.com/gmassoficial/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
+                      aria-label="Instagram"
+                    >
+                      <Instagram className="w-4 h-4" />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Siga-nos no Instagram</p>
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a 
+                      href="https://www.linkedin.com/in/g-mass-assessoria-e-consultoria-em-ehs-7187331a5/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors" 
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Siga-nos no LinkedIn</p>
+                  </TooltipContent>
+                </Tooltip>
+              </div>
+            </TooltipProvider>
           </div>
         </div>
       </div>
