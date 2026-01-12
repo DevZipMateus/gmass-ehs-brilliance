@@ -27,16 +27,16 @@ export function HeroHeader() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Curva azul principal */}
+          {/* Curva azul principal - mais suave e arredondada */}
           <path
-            d="M0 0H1440V50C1440 50 1400 50 1300 50C1100 55 900 70 700 95C500 120 300 145 150 160C75 168 0 175 0 175V0Z"
+            d="M0 0H1440V50Q1350 55 1200 70Q1000 90 750 115Q500 140 250 160Q100 172 0 180V0Z"
             className="fill-primary"
           />
-          {/* Curva verde accent - acompanha a curva azul */}
+          {/* Curva verde accent - linha mais espessa */}
           <path
-            d="M0 175C0 175 75 168 150 160C300 145 500 120 700 95C900 70 1100 55 1300 50C1400 50 1440 50 1440 50"
+            d="M0 180Q100 172 250 160Q500 140 750 115Q1000 90 1200 70Q1350 55 1440 50"
             className="stroke-accent"
-            strokeWidth="5"
+            strokeWidth="8"
             fill="none"
           />
         </svg>
