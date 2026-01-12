@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import auditImage from '@/assets/services-audit.jpg';
-import environmentalImage from '@/assets/environmental.jpg';
+import operationalImage from '@/assets/operational-management.jpg';
 
 const servicesAdmin = [
   {
@@ -250,7 +250,7 @@ export function ServicesSection() {
           {/* Featured Image */}
           <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-xl lg:row-span-2">
             <img
-              src={environmentalImage}
+              src={operationalImage}
               alt="Gestão operacional e sustentabilidade"
               className="w-full h-48 xs:h-56 sm:h-64 lg:h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
