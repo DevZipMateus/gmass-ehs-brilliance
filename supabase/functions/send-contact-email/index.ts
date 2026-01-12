@@ -64,7 +64,7 @@ serve(async (req: Request) => {
       },
     });
 
-    const destinatario = "ricardoandremonteiro@gmail.com";
+    const destinatario = "victor.matias@zipline.com.br";
 
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
