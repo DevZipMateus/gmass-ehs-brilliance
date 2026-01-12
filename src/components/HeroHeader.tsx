@@ -15,45 +15,52 @@ export function HeroHeader() {
 
   return (
     <div className="absolute top-0 left-0 right-0 z-40">
-      {/* Barra azul no topo + curva */}
+      {/* Barra azul no topo + curva côncava */}
       <div className="relative">
-        {/* Fundo azul que cobre toda navegação */}
-        <div className="absolute top-0 left-0 right-0 h-14 sm:h-14 bg-primary" />
+        {/* Fundo azul principal do header */}
+        <div className="bg-primary h-[80px] sm:h-[100px] md:h-[120px]" />
         
-        <svg
-          className="w-full h-[120px] sm:h-[150px] md:h-[180px]"
-          viewBox="0 0 1440 180"
-          preserveAspectRatio="none"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {/* Curva azul principal */}
-          <path
-            d="M0 0H1440V50C1440 50 1400 50 1300 50C1100 55 900 70 700 95C500 120 300 145 150 160C75 168 0 175 0 175V0Z"
-            className="fill-primary"
+        {/* Curvatura côncava usando pseudo-elemento */}
+        <div className="relative">
+          <div 
+            className="absolute -top-[60px] sm:-top-[80px] md:-top-[100px] left-0 w-full h-[80px] sm:h-[100px] md:h-[120px] bg-transparent"
+            style={{
+              background: 'transparent',
+            }}
           />
-          {/* Curva verde accent - acompanha a curva azul */}
-          <path
-            d="M0 175C0 175 75 168 150 160C300 145 500 120 700 95C900 70 1100 55 1300 50C1400 50 1440 50 1440 50"
-            className="stroke-accent"
-            strokeWidth="5"
-            fill="none"
+          {/* Elemento que cria a curva côncava */}
+          <div 
+            className="absolute -top-[60px] sm:-top-[80px] md:-top-[100px] left-0 w-full h-[80px] sm:h-[100px] md:h-[120px]"
+            style={{
+              backgroundColor: 'hsl(var(--background))',
+              borderRadius: '50% 50% 0 0 / 100% 100% 0 0',
+            }}
           />
-        </svg>
+          {/* Linha verde accent na borda da curva */}
+          <div 
+            className="absolute -top-[60px] sm:-top-[80px] md:-top-[100px] left-0 w-full h-[80px] sm:h-[100px] md:h-[120px] pointer-events-none"
+            style={{
+              borderRadius: '50% 50% 0 0 / 100% 100% 0 0',
+              border: '4px solid hsl(var(--accent))',
+              borderBottom: 'none',
+              backgroundColor: 'transparent',
+            }}
+          />
+        </div>
 
-        {/* Logo maior posicionado sobre a curva */}
-        <div className="absolute top-2 left-4 sm:left-8 md:left-12 z-10">
+        {/* Logo posicionado sobre o fundo azul */}
+        <div className="absolute top-3 sm:top-4 md:top-6 left-4 sm:left-8 md:left-12 z-10">
           <a href="#inicio" className="inline-block">
             <img
               src={logoGmass}
               alt="Gmass Assessoria & Consultoria em EHS"
-              className="h-20 xs:h-24 sm:h-28 md:h-36 lg:h-40 w-auto"
+              className="h-14 xs:h-16 sm:h-20 md:h-24 lg:h-28 w-auto"
             />
           </a>
         </div>
 
         {/* Navegação desktop - posicionada no topo direito */}
-        <nav className="hidden lg:flex absolute top-3 right-12 xl:right-16 items-center gap-4 xl:gap-6">
+        <nav className="hidden lg:flex absolute top-6 md:top-8 right-12 xl:right-16 items-center gap-4 xl:gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -81,7 +88,7 @@ export function HeroHeader() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden absolute top-3 right-4 p-2 bg-primary-foreground/10 rounded-lg"
+          className="lg:hidden absolute top-4 sm:top-6 right-4 p-2 bg-primary-foreground/10 rounded-lg z-10"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
@@ -95,7 +102,7 @@ export function HeroHeader() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-14 right-4 left-4 bg-background shadow-lg rounded-2xl overflow-hidden z-50 animate-fade-in">
+        <div className="lg:hidden absolute top-[70px] sm:top-[90px] right-4 left-4 bg-background shadow-lg rounded-2xl overflow-hidden z-50 animate-fade-in">
           <nav className="py-4 flex flex-col gap-1 px-4">
             {navLinks.map((link) => (
               <a
