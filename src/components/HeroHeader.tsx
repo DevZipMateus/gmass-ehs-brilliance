@@ -15,52 +15,42 @@ export function HeroHeader() {
 
   return (
     <div className="absolute top-0 left-0 right-0 z-40">
-      {/* Barra azul no topo + curva côncava */}
+      {/* Header com curvatura côncava usando SVG */}
       <div className="relative">
-        {/* Fundo azul principal do header */}
-        <div className="bg-primary h-[80px] sm:h-[100px] md:h-[120px]" />
-        
-        {/* Curvatura côncava usando pseudo-elemento */}
-        <div className="relative">
-          <div 
-            className="absolute -top-[60px] sm:-top-[80px] md:-top-[100px] left-0 w-full h-[80px] sm:h-[100px] md:h-[120px] bg-transparent"
-            style={{
-              background: 'transparent',
-            }}
+        <svg
+          className="w-full h-[100px] sm:h-[120px] md:h-[140px]"
+          viewBox="0 0 1440 140"
+          preserveAspectRatio="none"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Fundo azul com curva côncava - desce da direita para esquerda */}
+          <path
+            d="M0 0 H1440 V40 Q1200 40, 900 60 Q600 80, 300 95 Q100 108, 0 115 Z"
+            className="fill-primary"
           />
-          {/* Elemento que cria a curva côncava */}
-          <div 
-            className="absolute -top-[60px] sm:-top-[80px] md:-top-[100px] left-0 w-full h-[80px] sm:h-[100px] md:h-[120px]"
-            style={{
-              backgroundColor: 'hsl(var(--background))',
-              borderRadius: '50% 50% 0 0 / 100% 100% 0 0',
-            }}
+          {/* Linha verde accent acompanhando a curva */}
+          <path
+            d="M0 115 Q100 108, 300 95 Q600 80, 900 60 Q1200 40, 1440 40"
+            className="stroke-accent"
+            strokeWidth="5"
+            fill="none"
           />
-          {/* Linha verde accent na borda da curva */}
-          <div 
-            className="absolute -top-[60px] sm:-top-[80px] md:-top-[100px] left-0 w-full h-[80px] sm:h-[100px] md:h-[120px] pointer-events-none"
-            style={{
-              borderRadius: '50% 50% 0 0 / 100% 100% 0 0',
-              border: '4px solid hsl(var(--accent))',
-              borderBottom: 'none',
-              backgroundColor: 'transparent',
-            }}
-          />
-        </div>
+        </svg>
 
         {/* Logo posicionado sobre o fundo azul */}
-        <div className="absolute top-3 sm:top-4 md:top-6 left-4 sm:left-8 md:left-12 z-10">
+        <div className="absolute top-2 sm:top-3 md:top-4 right-4 sm:right-8 md:right-12 z-10">
           <a href="#inicio" className="inline-block">
             <img
               src={logoGmass}
               alt="Gmass Assessoria & Consultoria em EHS"
-              className="h-14 xs:h-16 sm:h-20 md:h-24 lg:h-28 w-auto"
+              className="h-12 xs:h-14 sm:h-16 md:h-20 lg:h-24 w-auto"
             />
           </a>
         </div>
 
-        {/* Navegação desktop - posicionada no topo direito */}
-        <nav className="hidden lg:flex absolute top-6 md:top-8 right-12 xl:right-16 items-center gap-4 xl:gap-6">
+        {/* Navegação desktop - posicionada no topo esquerdo */}
+        <nav className="hidden lg:flex absolute top-3 md:top-4 left-12 xl:left-16 items-center gap-4 xl:gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -88,7 +78,7 @@ export function HeroHeader() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden absolute top-4 sm:top-6 right-4 p-2 bg-primary-foreground/10 rounded-lg z-10"
+          className="lg:hidden absolute top-3 sm:top-4 left-4 p-2 bg-primary-foreground/10 rounded-lg z-10"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
