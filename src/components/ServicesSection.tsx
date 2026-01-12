@@ -260,7 +260,7 @@ export function ServicesSection() {
                   Gestão operacional
                 </h3>
                 <p className="text-accent-foreground/80 text-[10px] xs:text-xs sm:text-sm">
-                  Compromisso com a sustentabilidade
+                  Conhecimentos com o atendimento normativo
                 </p>
               </div>
             </div>
