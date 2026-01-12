@@ -21,22 +21,22 @@ export function HeroHeader() {
         <div className="absolute top-0 left-0 right-0 h-14 sm:h-14 bg-primary" />
         
         <svg
-          className="w-full h-[100px] sm:h-[130px] md:h-[160px]"
-          viewBox="0 0 1440 160"
+          className="w-full h-[120px] sm:h-[150px] md:h-[180px]"
+          viewBox="0 0 1440 180"
           preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Curva azul principal - mais acentuada */}
+          {/* Curva azul principal */}
           <path
-            d="M0 0H1440V20Q1400 22 1300 28Q1100 40 900 60Q700 85 500 110Q300 135 150 150Q50 158 0 160V0Z"
+            d="M0 0H1440V50C1440 50 1400 50 1300 50C1100 55 900 70 700 95C500 120 300 145 150 160C75 168 0 175 0 175V0Z"
             className="fill-primary"
           />
-          {/* Curva verde accent */}
+          {/* Curva verde accent - acompanha a curva azul */}
           <path
-            d="M0 160Q50 158 150 150Q300 135 500 110Q700 85 900 60Q1100 40 1300 28Q1400 22 1440 20"
+            d="M0 175C0 175 75 168 150 160C300 145 500 120 700 95C900 70 1100 55 1300 50C1400 50 1440 50 1440 50"
             className="stroke-accent"
-            strokeWidth="8"
+            strokeWidth="5"
             fill="none"
           />
         </svg>
