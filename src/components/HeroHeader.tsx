@@ -39,7 +39,7 @@ export function HeroHeader() {
         </svg>
 
         {/* Logo maior posicionado sobre a curva */}
-        <div className="absolute top-2 left-4 sm:left-8 md:left-12 z-10">
+        <div className="absolute top-2 left-4 sm:left-8 md:left-12 z-20">
           <a href="#inicio" className="inline-block">
             <img
               src={logoGmass}
@@ -50,7 +50,7 @@ export function HeroHeader() {
         </div>
 
         {/* Navegação desktop - posicionada no topo direito */}
-        <nav className="hidden lg:flex absolute top-3 right-12 xl:right-16 items-center gap-4 xl:gap-6">
+        <nav className="hidden lg:flex absolute top-3 right-12 xl:right-16 items-center gap-4 xl:gap-6 z-20">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -78,7 +78,7 @@ export function HeroHeader() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden absolute top-3 right-4 p-2 bg-primary-foreground/10 rounded-lg"
+          className="lg:hidden absolute top-3 right-4 p-2 bg-primary-foreground/10 rounded-lg z-20"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
