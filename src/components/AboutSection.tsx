@@ -17,7 +17,7 @@ const timelineEvents = [
   {
     year: '2018',
     title: 'Nova identidade',
-    description: 'Mudança para Gmass Assessoria & Consultoria em EHS.',
+    description: 'Mudança para G.Mass Assessoria & Consultoria em EHS.',
   },
   {
     year: '2019',
@@ -68,7 +68,7 @@ export function AboutSection() {
               Quem somos
             </span>
             <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground mb-2 xs:mb-3 sm:mb-4">
-              Sobre a Gmass
+              Sobre a G.Mass
             </h2>
             <p className="text-sm xs:text-base sm:text-lg text-muted-foreground mb-3">
               Com mais de uma década de experiência, a G.mass é especializada em consultoria e assessoria em segurança do trabalho, saúde ocupacional e meio ambiente.
