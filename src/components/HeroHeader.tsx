@@ -41,8 +41,8 @@ export function HeroHeader() {
           {/* Faixa verde com espessura variável - mais grossa no lado direito */}
           <path
             d="M 100 100 
-               A 100 100 0 0 0 15 8 
-               L 16 9.5
+               A 100 100 0 0 0 0 0 
+               L 0.8 2
                A 92 92 0 0 1 100 88
                Z"
             fill="url(#greenGradient)"
