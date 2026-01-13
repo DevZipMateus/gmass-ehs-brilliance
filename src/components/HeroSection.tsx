@@ -51,7 +51,7 @@ export function HeroSection() {
             className="font-heading text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-4 sm:mb-6 animate-fade-up leading-tight px-1 lg:px-0 drop-shadow-lg"
             style={{ animationDelay: '0.2s' }}
           >
-            Gmass
+            G.Mass
             <br />
             <span className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl">Assessoria & Consultoria em EHS</span>
           </h1>

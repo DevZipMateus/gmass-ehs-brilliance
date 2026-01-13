@@ -43,7 +43,7 @@ export function HeroHeader() {
           <a href="#inicio" className="inline-block">
             <img
               src={logoGmass}
-              alt="Gmass Assessoria & Consultoria em EHS"
+              alt="G.Mass Assessoria & Consultoria em EHS"
               className="h-20 xs:h-24 sm:h-28 md:h-36 lg:h-40 w-auto"
             />
           </a>

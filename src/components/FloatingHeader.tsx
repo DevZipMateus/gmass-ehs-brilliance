@@ -40,7 +40,7 @@ export function FloatingHeader() {
         <a href="#inicio" className="flex items-center">
           <img
             src={logoGmass}
-            alt="Gmass Assessoria & Consultoria em EHS"
+            alt="G.Mass Assessoria & Consultoria em EHS"
             className="h-10 sm:h-12 w-auto"
           />
         </a>

@@ -16,7 +16,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1 flex items-center">
             <img 
               src={logoGmass} 
-              alt="Gmass Assessoria & Consultoria em EHS" 
+              alt="G.Mass Assessoria & Consultoria em EHS" 
               className="h-20 sm:h-24 md:h-28 w-auto brightness-110" 
             />
           </div>
