@@ -26,12 +26,12 @@ export function HeroHeader() {
         >
           {/* Curva azul principal - espelhada (maior no lado direito), transparente no resto */}
           <path
-            d="M 0 0 L 100 0 L 100 90 A 80 90 0 0 0 20 0 L 0 0 Z"
+            d="M 0 0 L 100 0 L 100 90 A 100 90 0 0 0 0 0 Z"
             className="fill-primary"
           />
           {/* Curva verde accent - acompanha a borda */}
           <path
-            d="M 100 90 A 80 90 0 0 0 20 0"
+            d="M 100 90 A 100 90 0 0 0 0 0"
             className="stroke-accent"
             strokeWidth="0.8"
             fill="none"
