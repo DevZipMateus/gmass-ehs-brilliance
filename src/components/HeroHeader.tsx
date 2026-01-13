@@ -26,12 +26,12 @@ export function HeroHeader() {
         >
           {/* Curva azul principal - preenche topo/esquerda, transparente no resto */}
           <path
-            d="M 0 0 L 80 0 A 80 100 0 0 1 0 100 Z"
+            d="M 0 0 L 80 0 A 80 90 0 0 1 0 90 Z"
             className="fill-primary"
           />
           {/* Curva verde accent - acompanha a borda */}
           <path
-            d="M 80 0 A 80 100 0 0 1 0 100"
+            d="M 80 0 A 80 90 0 0 1 0 90"
             className="stroke-accent"
             strokeWidth="0.8"
             fill="none"
