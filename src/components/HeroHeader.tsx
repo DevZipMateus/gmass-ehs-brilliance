@@ -15,28 +15,25 @@ export function HeroHeader() {
 
   return (
     <div className="absolute top-0 left-0 right-0 z-40">
-      {/* Barra azul no topo + curva */}
+      {/* Curva côncava ocupando toda a tela */}
       <div className="relative">
-        {/* Fundo azul que cobre toda navegação */}
-        <div className="absolute top-0 left-0 right-0 h-14 sm:h-14 bg-primary" />
-        
         <svg
-          className="w-full h-[120px] sm:h-[150px] md:h-[180px]"
-          viewBox="0 0 1440 180"
+          className="w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px]"
+          viewBox="0 0 100 100"
           preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           {/* Curva azul principal - côncava ocupando tela toda */}
           <path
-            d="M0 180 A 1440 180 0 0 1 1440 0 L 1440 180 L 0 180 Z"
+            d="M 0 100 A 80 100 0 0 1 80 0 L 100 0 L 100 100 L 0 100 Z"
             className="fill-primary"
           />
           {/* Curva verde accent - acompanha a curva côncava */}
           <path
-            d="M0 180 A 1440 180 0 0 1 1440 0"
+            d="M 0 100 A 80 100 0 0 1 80 0"
             className="stroke-accent"
-            strokeWidth="5"
+            strokeWidth="1"
             fill="none"
           />
         </svg>
