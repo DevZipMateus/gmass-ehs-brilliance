@@ -24,14 +24,14 @@ export function HeroHeader() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Curva azul principal - preenche topo/esquerda, transparente no resto */}
+          {/* Curva azul principal - preenche topo, curva côncava descendo para esquerda */}
           <path
-            d="M 0 0 L 80 0 A 80 90 0 0 1 0 90 Z"
+            d="M 0 0 L 100 0 A 120 120 0 0 1 0 100 Z"
             className="fill-primary"
           />
           {/* Curva verde accent - acompanha a borda */}
           <path
-            d="M 80 0 A 80 90 0 0 1 0 90"
+            d="M 100 0 A 120 120 0 0 1 0 100"
             className="stroke-accent"
             strokeWidth="0.8"
             fill="none"
