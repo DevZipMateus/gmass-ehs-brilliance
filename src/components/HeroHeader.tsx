@@ -27,14 +27,14 @@ export function HeroHeader() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Curva azul principal */}
+          {/* Curva azul principal - côncava */}
           <path
-            d="M0 0H1440V50C1440 50 1400 50 1300 50C1100 55 900 70 700 95C500 120 300 145 150 160C75 168 0 175 0 175V0Z"
+            d="M0 162 A 1150 162 0 0 1 1150 0 L 1440 0 L 1440 180 L 0 180 Z"
             className="fill-primary"
           />
-          {/* Curva verde accent - acompanha a curva azul */}
+          {/* Curva verde accent - acompanha a curva côncava */}
           <path
-            d="M0 175C0 175 75 168 150 160C300 145 500 120 700 95C900 70 1100 55 1300 50C1400 50 1440 50 1440 50"
+            d="M0 162 A 1150 162 0 0 1 1150 0"
             className="stroke-accent"
             strokeWidth="5"
             fill="none"
