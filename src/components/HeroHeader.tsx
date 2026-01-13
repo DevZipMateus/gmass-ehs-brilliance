@@ -37,58 +37,58 @@ export function HeroHeader() {
             fill="none"
           />
         </svg>
+      </div>
 
-        {/* Logo maior posicionado sobre a curva */}
-        <div className="absolute top-2 left-4 sm:left-8 md:left-12 z-20">
-          <a href="#inicio" className="inline-block">
-            <img
-              src={logoGmass}
-              alt="G.Mass Assessoria & Consultoria em EHS"
-              className="h-20 xs:h-24 sm:h-28 md:h-36 lg:h-40 w-auto"
-            />
-          </a>
-        </div>
+      {/* Logo maior posicionado sobre a curva - aumentado 20% */}
+      <div className="absolute top-2 left-4 sm:left-8 md:left-12 z-50">
+        <a href="#inicio" className="inline-block">
+          <img
+            src={logoGmass}
+            alt="G.Mass Assessoria & Consultoria em EHS"
+            className="h-24 xs:h-28 sm:h-34 md:h-44 lg:h-48 w-auto"
+          />
+        </a>
+      </div>
 
-        {/* Navegação desktop - posicionada no topo direito */}
-        <nav className="hidden lg:flex absolute top-3 right-12 xl:right-16 items-center gap-4 xl:gap-6 z-20">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="font-medium text-primary-foreground/90 hover:text-accent text-[15px] transition-colors whitespace-nowrap"
-            >
-              {link.label}
-            </a>
-          ))}
+      {/* Navegação desktop - posicionada no topo direito */}
+      <nav className="hidden lg:flex absolute top-4 right-12 xl:right-16 items-center gap-4 xl:gap-6 z-50">
+        {navLinks.map((link) => (
           <a
-            href="#cadastro"
+            key={link.href}
+            href={link.href}
             className="font-medium text-primary-foreground/90 hover:text-accent text-[15px] transition-colors whitespace-nowrap"
           >
-            Cadastro
+            {link.label}
           </a>
-          <a
-            href="https://wa.me/5515991463756"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium bg-accent text-accent-foreground px-4 py-2 rounded-full text-[15px] transition-colors hover:bg-accent/90 whitespace-nowrap"
-          >
-            Fale Conosco
-          </a>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden absolute top-3 right-4 p-2 bg-primary-foreground/10 rounded-lg z-20"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Menu"
+        ))}
+        <a
+          href="#cadastro"
+          className="font-medium text-primary-foreground/90 hover:text-accent text-[15px] transition-colors whitespace-nowrap"
         >
-          {isMobileMenuOpen ? (
-            <X className="h-6 w-6 text-primary-foreground" />
-          ) : (
-            <Menu className="h-6 w-6 text-primary-foreground" />
-          )}
-        </button>
-      </div>
+          Cadastro
+        </a>
+        <a
+          href="https://wa.me/5515991463756"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium bg-accent text-accent-foreground px-4 py-2 rounded-full text-[15px] transition-colors hover:bg-accent/90 whitespace-nowrap"
+        >
+          Fale Conosco
+        </a>
+      </nav>
+
+      {/* Mobile Menu Button */}
+      <button
+        className="lg:hidden absolute top-4 right-4 p-2 bg-primary-foreground/10 rounded-lg z-50"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Menu"
+      >
+        {isMobileMenuOpen ? (
+          <X className="h-6 w-6 text-primary-foreground" />
+        ) : (
+          <Menu className="h-6 w-6 text-primary-foreground" />
+        )}
+      </button>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
