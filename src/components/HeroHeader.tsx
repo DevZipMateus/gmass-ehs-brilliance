@@ -24,15 +24,22 @@ export function HeroHeader() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Definição do gradiente verde */}
+          <defs>
+            <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#94C941" />
+              <stop offset="100%" stopColor="#4E7313" />
+            </linearGradient>
+          </defs>
           {/* Curva azul principal - espelhada (maior no lado direito), transparente no resto */}
           <path
             d="M 0 0 L 100 0 L 100 100 A 100 100 0 0 0 0 0 Z"
             className="fill-primary"
           />
-          {/* Curva verde accent - acompanha a borda */}
+          {/* Curva verde accent com gradiente - acompanha a borda */}
           <path
             d="M 100 100 A 100 100 0 0 0 0 0"
-            className="stroke-accent"
+            stroke="url(#greenGradient)"
             strokeWidth="0.8"
             fill="none"
           />
