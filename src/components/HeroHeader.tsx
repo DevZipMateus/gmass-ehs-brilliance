@@ -42,8 +42,8 @@ export function HeroHeader() {
           <path
             d="M 100 100 
                A 100 100 0 0 0 0 0 
-               L 0 0.3
-               A 99.7 99.7 0 0 1 100 96.5
+               L 0.5 1.5
+               A 97 97 0 0 1 100 94
                Z"
             fill="url(#greenGradient)"
           />
