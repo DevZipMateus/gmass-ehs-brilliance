@@ -1,5 +1,5 @@
 import { Target, Eye, Heart } from 'lucide-react';
-import aboutImage from '@/assets/about-training.jpg';
+import aboutImage from '@/assets/about-training-diverse.jpg';
 import safetyExcellenceImage from '@/assets/safety-excellence.png';
 import teamCollaborationImage from '@/assets/team-collaboration.jpg';
 
