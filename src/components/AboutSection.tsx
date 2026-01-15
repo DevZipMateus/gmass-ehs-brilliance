@@ -1,6 +1,6 @@
 import { Target, Eye, Heart } from 'lucide-react';
 import aboutImage from '@/assets/about-training.jpg';
-import safetyInspectionImage from '@/assets/safety-inspection.jpg';
+import safetyExcellenceImage from '@/assets/safety-excellence.png';
 import teamCollaborationImage from '@/assets/team-collaboration.jpg';
 
 const timelineEvents = [
@@ -129,8 +129,8 @@ export function AboutSection() {
         <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 xs:gap-4 sm:gap-6 mb-8 xs:mb-10 sm:mb-12 md:mb-16 max-w-4xl mx-auto">
           <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl">
             <img
-              src={safetyInspectionImage}
-              alt="Inspeção de segurança do trabalho"
+              src={safetyExcellenceImage}
+              alt="Profissional de segurança do trabalho inspecionando equipamento industrial com tablet"
               className="w-full h-40 xs:h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent flex items-end p-3 xs:p-4 sm:p-6">
