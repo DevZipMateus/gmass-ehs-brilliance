@@ -1,7 +1,7 @@
 import { Shield, Leaf } from 'lucide-react';
 
 import { HeroHeader } from '@/components/HeroHeader';
-import heroBackground from '@/assets/hero-background.jpg';
+import heroBackground from '@/assets/hero-background.png';
 
 export function HeroSection() {
   return (
